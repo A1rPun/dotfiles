@@ -12,7 +12,3 @@ alias sator="python ~/projects/pys/sator.py"
 ipscan(){
   nmap -sn "$1.1-254/24" | egrep "scan report" | cut -d " " -f 5
 }
-
-# todo .inputrc
-bind "set completion-ignore-case on"
-bind "set show-all-if-ambiguous on"
