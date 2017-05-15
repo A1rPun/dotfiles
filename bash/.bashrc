@@ -2,9 +2,13 @@
 export PS1="\[\033[38;5;10m\]\w/\$"
 
 # Aliases
+alias pls="sudo !!"
 alias ll="ls -l"
 alias la="ls -la"
 alias ins="apt-get install"
+alias last="history 10"
+
+# Termux aliases
 alias shf="mpv --fs --shuffle -vo tct ~/storage/music"
 alias sator="python ~/projects/pys/sator.py"
 
