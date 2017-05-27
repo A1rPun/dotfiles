@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
-fancy_echo() {
+echoo() {
   local fmt="$1"; shift
-  printf "\n$fmt\n" "$@"
+  printf "$fmt\n" "$@"
 }
 
-fancy_echo "This script will setup your linux distro :)"
-# TODO
+echoo "This script will setup your linux distro :)"
+ln -sf /bash/.bashrc ~/
+ln -sf /bash/.inputrc ~/
+echoo "Done installing dotfiles"

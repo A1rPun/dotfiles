@@ -1,5 +1,9 @@
 # Terminal style
-export PS1="\[\033[38;5;10m\]\w/\$"
+C1="\[\e[38;5;28m\]"
+C2="\[\e[38;5;41m\]" 
+GREEN="\[\e[38;5;10m\]"
+export PS1="$C1\H:$C2[\w]$GREEN\n\#\$"
+export PS2="$GREEN> "
 
 # Alias
 alias pls="sudo !!"
@@ -12,6 +16,7 @@ alias last="history 10"
 alias gstat="git status"
 alias gcom="git commit -m"
 alias glog="git log --pretty=oneline"
+alias ggg="git log --pretty=format:\"%h %s\" --graph"
 
 # Termux alias
 alias shf="mpv --fs --shuffle -vo tct ~/storage/music"
@@ -19,5 +24,6 @@ alias sator="python ~/projects/pys/sator.py"
 
 # Scan network
 ipscan(){
-  nmap -sn "$1.1-254/24" | egrep "scan report" | cut -d " " -f 5
+#  nmap -sn "$1.1-254/24" | egrep "scan report" | cut -d " " -f 5
+  nmap -sn "$1.1-254/24"
 }
