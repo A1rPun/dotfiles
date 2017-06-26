@@ -6,6 +6,7 @@ export PS1="$C1\H:$C2[\w]$GREEN\n\#\$"
 export PS2="$GREEN> "
 
 # Alias
+alias cd..="cd .."
 alias nb="nano ~/.bashrc"
 alias pls="sudo !!"
 alias ll="ls -l"
@@ -29,3 +30,4 @@ ipscan(){
 #  nmap -sn "$1.1-254/24" | egrep "scan report" | cut -d " " -f 5
   nmap -sn "$1.1-254/24"
 }
+
