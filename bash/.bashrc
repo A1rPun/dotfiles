@@ -8,6 +8,7 @@ export PS2="$GREEN> "
 # Alias
 alias cd..="cd .."
 alias nb="nano ~/.bashrc"
+alias s="sudo"
 alias pls="sudo !!"
 alias ls="ls --color=auto"
 alias ll="ls -l"
@@ -29,6 +30,5 @@ alias ac="asciinema rec -w 2.5 -c '$PREFIX/bin/bash -l' demo.json"
 # Scan network
 ipscan(){
 #  nmap -sn "$1.1-254/24" | egrep "scan report" | cut -d " " -f 5
-  nmap -sn "$1.1-254/24"
+  nmap -sn --system-dns "$1.1-254/24"
 }
-
