@@ -1,8 +1,10 @@
 # Terminal style
 C1="\[\e[38;5;28m\]"
 C2="\[\e[38;5;41m\]" 
+RED="\[\e[38;5;196m\]"
+YELLOW="\[\e[38;5;11m\]"
 GREEN="\[\e[38;5;10m\]"
-export PS1="$C1\H:$C2[\w]$GREEN\n\#\$"
+export PS1="$RED┌─[$C1\u$C2@$GREEN\H$RED]─[$C2\w$RED]\n$RED└─\$$GREEN"
 export PS2="$GREEN> "
 
 # Alias
