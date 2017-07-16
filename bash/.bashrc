@@ -11,11 +11,12 @@ export PS2="$GREEN> "
 alias cd..="cd .."
 alias nb="nano ~/.bashrc"
 alias s="sudo"
-alias pls="sudo !!"
+alias pls='sudo $(fc -ln -1)'
 alias ls="ls --color=auto"
 alias ll="ls -l"
 alias la="ls -la"
 alias ins="apt-get install"
+alias updategrub="grub-mkconfig -o /boot/grub/grub.cfg"
 alias last="history 10"
 
 # Git alias
