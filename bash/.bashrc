@@ -1,4 +1,5 @@
 # Alias
+RAINBOW="toilet -f term --rainbow"
 ## Open this file
 alias nb="nano ~/.bashrc"
 ## General
@@ -7,7 +8,7 @@ alias cd..="cd .."
 alias ls="ls --color=auto"
 alias ll="ls -l"
 alias la="ls -la"
-alias last="history 10"
+alias last="history 10 | $RAINBOW"
 ## Arch
 alias s="sudo"
 alias pls='sudo $(fc -ln -1)'
@@ -23,7 +24,7 @@ alias ac="asciinema rec -w 2.5 -c '$PREFIX/bin/bash -l' demo.json"
 alias gs="git status"
 alias gc="git commit -m"
 alias gl="git log --pretty=oneline"
-alias ggg="git log --pretty=format:\"%h %s\" --graph"
+alias ggg="git log --pretty=format:\"%h %s\" --graph | $RAINBOW"
 ### Htop
 alias ht="htop --sort-key=PERCENT_MEM"
 ### Mpv
