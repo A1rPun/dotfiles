@@ -29,7 +29,8 @@ alias gp="git push"
 alias go="git checkout"
 alias gl="git log --pretty=format:\"%h %s\" --graph"
 ### GitDaily
-alias gd="gitdaily --all -c"
+alias gd="gitdaily --all"
+alias gdc="gd --compact"
 ### Htop
 alias ht="htop --sort-key=PERCENT_MEM"
 ### Mpv
