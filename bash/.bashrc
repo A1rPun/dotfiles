@@ -9,7 +9,7 @@ alias cd..="cd .."
 alias ls="ls --color=auto"
 alias ll="ls -l"
 alias la="ls -la"
-alias last="history 10 | $RAINBOW"
+alias last="history 10"
 ## Arch
 alias s="sudo"
 alias pls='sudo $(fc -ln -1)'
@@ -24,10 +24,12 @@ alias ac="asciinema rec -w 2.5 -c '$PREFIX/bin/bash -l' demo.json"
 ### Git
 alias gs="git status"
 alias gc="git commit -m"
-alias gl="git log --pretty=oneline"
-alias ggg="git log --pretty=format:\"%h %s\" --graph | $RAINBOW"
+alias gg="git pull"
+alias gp="git push"
+alias go="git checkout"
+alias gl="git log --pretty=format:\"%h %s\" --graph"
 ### GitDaily
-alias gd="gitdaily -all -c"
+alias gd="gitdaily --all -c"
 ### Htop
 alias ht="htop --sort-key=PERCENT_MEM"
 ### Mpv
