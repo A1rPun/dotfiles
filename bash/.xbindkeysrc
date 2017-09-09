@@ -1,0 +1,26 @@
+###########################
+# xbindkeys configuration #
+###########################
+#
+# To specify a key, you can use 'xbindkeys --key'
+#
+# The format of a command line is:
+#    "command to start"
+#       associated key
+#
+# List of modifier:
+#   Release, Control, Shift, Mod1 (Alt), Mod2 (NumLock),
+#   Mod3 (CapsLock), Mod4, Mod5 (Scroll).
+#
+# keystate_numlock = enable
+# keystate_capslock = enable
+# keystate_scrolllock= enable
+
+"xfce4-terminal"
+  Mod4 + t
+
+"ponymix -d 0 increase 5"
+  XF86AudioRaiseVolume
+
+"ponymix -d 0 decrease 5"
+  XF86AudioLowerVolume

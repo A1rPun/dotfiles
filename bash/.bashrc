@@ -1,5 +1,6 @@
 # Alias
-RAINBOW="toilet -f term --rainbow"
+## For pipes |
+RAINBOW="toilet -f term --gay"
 ## Open this file
 alias nb="nano ~/.bashrc"
 ## General
@@ -25,6 +26,8 @@ alias gs="git status"
 alias gc="git commit -m"
 alias gl="git log --pretty=oneline"
 alias ggg="git log --pretty=format:\"%h %s\" --graph | $RAINBOW"
+### GitDaily
+alias gd="gitdaily -all -c"
 ### Htop
 alias ht="htop --sort-key=PERCENT_MEM"
 ### Mpv
