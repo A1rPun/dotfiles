@@ -79,10 +79,11 @@ LIGHTGREEN="\[\e[38;5;10m\]"
 YELLOW="\[\e[38;5;11m\]"
 ## Themes
 ARROWS="$DARKGREEN>$GREEN>$LIGHTGREEN> "
-HAXXOR="$RED┌─[$DARKGREEN\u$GREEN@$LIGHTGREEN\H$RED]─[$GREEN\w$RED]\n$RED└─\$$LIGHTGREEN"
+GARTER="\[\e[0;44;30m\] \u \[\e[0;104;34m\]▶\[\e[0;104;30m\] \H \[\e[0;46;94m\]▶\[\e[0;46;30m\] \w \[\e[0;106;36m\]▶\[\e[0;106;30m\] \# \[\e[0;49;96m\]▶\n\[\e[0;44;30m\] $ \[\e[0;49;34m\]▶\[\e[0;49;96m\]"
+HAXXOR="$RED┌─[$DARKGREEN\u$RED]─[$GREEN\H$RED]─[$LIGHTGREEN\w$RED]\n$RED└─\$$LIGHTGREEN"
 SIMPLE="$LIGHTGREEN> "
 ## Export prompt screens
-export PS1="$HAXXOR"
+export PS1="$GARTER"
 export PS2="$SIMPLE"
 export PS3="$SIMPLE"
 export PS4="$SIMPLE"
