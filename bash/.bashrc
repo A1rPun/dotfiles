@@ -1,3 +1,5 @@
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
 # Alias
 ## For pipes |
 RAINBOW="toilet -f term --gay"
@@ -87,3 +89,11 @@ export PS1="$GARTER"
 export PS2="$SIMPLE"
 export PS3="$SIMPLE"
 export PS4="$SIMPLE"
+
+# Other options
+# Ignore duplicate commands, & ignore commands starting with a space.
+export HISTCONTROL=erasedups:ignorespace
+export HISTSIZE=1000
+# Append to the history instead of overwriting (good for multiple connections).
+shopt -s histappend
+shopt -s checkwinsize
