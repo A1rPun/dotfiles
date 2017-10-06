@@ -16,11 +16,24 @@
 # keystate_capslock = enable
 # keystate_scrolllock= enable
 
+# Mute sound
+"ponymix toggle"
+  XF86AudioMute
+# Sound++
+"ponymix -d 0 increase 5"
+  XF86AudioRaiseVolume
+# Sound--
+"ponymix -d 0 decrease 5"
+  XF86AudioLowerVolume
+
+# Spawn terminal
 "xfce4-terminal"
   Mod4 + t
 
-"ponymix -d 0 increase 5"
-  XF86AudioRaiseVolume
+# App finder
+"rofi -show run"
+  Mod4 + space
 
-"ponymix -d 0 decrease 5"
-  XF86AudioLowerVolume
+# Window switch
+"rofi -show"
+  m:0x50 + c:133

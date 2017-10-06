@@ -32,7 +32,7 @@ alias gg="git pull"
 alias gp="git push"
 alias go="git checkout"
 alias gl="git log --pretty=format:\"%h %s\" --graph"
-alias yolo="git add *"
+alias yolo="git add ."
 ### GitDaily
 alias gd="gitdaily --all"
 alias gdc="gd --compact"
@@ -71,6 +71,16 @@ ipscan(){
 #  nmap -sn "$1.1-254/24" | egrep "scan report" | cut -d " " -f 5
   nmap -sn --system-dns "$1.1-254/24"
 }
+# Copyright (c) 2017 - Paradoxis
+GORDON_INSULTS=~/git/Gordon/insults
+gordon() {
+    if [[ $? != 0 && -d $GORDON_INSULTS ]]; then
+        insult=$(ls $GORDON_INSULTS | shuf -n 1)
+        mpv --really-quiet $GORDON_INSULTS/$insult &
+        disown
+    fi
+}
+PROMPT_COMMAND=gordon
 
 # Terminal styles
 ## Colors
@@ -91,9 +101,7 @@ export PS3="$SIMPLE"
 export PS4="$SIMPLE"
 
 # Other options
-# Ignore duplicate commands, & ignore commands starting with a space.
 export HISTCONTROL=erasedups:ignorespace
 export HISTSIZE=1000
-# Append to the history instead of overwriting (good for multiple connections).
 shopt -s histappend
 shopt -s checkwinsize
