@@ -3,7 +3,7 @@
 # Alias
 ## For pipes |
 RAINBOW="toilet -f term --gay"
-## Open this file
+## pen this file
 alias nb="nano ~/.bashrc"
 ## General
 alias ..="cd .."
@@ -29,6 +29,7 @@ alias lol="fortune | cowthink | toilet -f term --metal"
 alias gs="git status"
 alias gc="git commit -m"
 alias gg="git pull"
+alias gd="git diff"
 alias gp="git push"
 alias go="git checkout"
 alias gl="git log --pretty=format:\"%h %s\" --graph"
