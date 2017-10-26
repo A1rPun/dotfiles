@@ -33,11 +33,11 @@ alias gd="git diff"
 alias gp="git push"
 alias go="git checkout"
 alias gl="git log --pretty=format:\"%h %s\" --graph"
+alias diff="git diff"
 alias yolo="git add ."
 ### GitDaily
 alias gd="gitdaily --all"
 alias gdc="gd --compact"
-alias gdf="gd $(lol)"
 ### Htop
 alias ht="htop --sort-key=PERCENT_MEM"
 ### Mpv
