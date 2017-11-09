@@ -1,0 +1,6 @@
+/* VSCode User settings.json */
+{
+    "gitlens.codeLens.authors.enabled": false,
+    "gitlens.codeLens.recentChange.enabled": false,
+    "workbench.iconTheme": "vscode-icons"
+}
