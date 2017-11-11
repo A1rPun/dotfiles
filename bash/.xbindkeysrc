@@ -19,16 +19,26 @@
 # Mute sound
 "notify-send -a ponymix "Muted $(ponymix toggle)""
   XF86AudioMute
+
 # Sound++
 "notify-send -a ponymix "Volume $(ponymix -d 0 increase 5)""
   XF86AudioRaiseVolume
+
 # Sound--
 "notify-send -a ponymix "Volume $(ponymix -d 0 decrease 5)""
   XF86AudioLowerVolume
 
+# Log out
+"xfce4-session-logout -l"
+  Mod4 + l
+
 # Spawn terminal
 "xfce4-terminal"
   Mod4 + t
+
+# Spawn explorer
+"thunar"
+  Mod4 + e
 
 # App finder
 "rofi -show run"
@@ -36,4 +46,4 @@
 
 # Window switch
 "rofi -show"
-  m:0x50 + c:133
+  Mod4 + Tab
