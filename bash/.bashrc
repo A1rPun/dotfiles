@@ -13,11 +13,15 @@ alias ll="ls -l"
 alias la="ls -la"
 alias last="history 10"
 alias rimraf="rm -rf"
+alias qp="ps faux | grep"
 ## Arch
 alias s="sudo"
 alias pls='sudo $(fc -ln -1)'
+alias archupdate="yaourt -Syy"
+alias archupgrade="yaourt -Su"
+alias archaur="yaourt -Su --aur"
 alias ya="yaourt -S"
-alias yas="yaourt -Qs"
+alias yas="yaourt -ss"
 alias updategrub="grub-mkconfig -o /boot/grub/grub.cfg"
 ## Termux
 alias ins="apt-get install"
@@ -96,7 +100,7 @@ GARTER="\[\e[0;44;30m\] \u \[\e[0;104;34m\]▶\[\e[0;104;30m\] \H \[\e[0;46;94m\
 HAXXOR="$RED┌─[$DARKGREEN\u$RED]─[$GREEN\H$RED]─[$LIGHTGREEN\w$RED]\n$RED└─\$$LIGHTGREEN"
 SIMPLE="$LIGHTGREEN> "
 ## Export prompt screens
-export PS1="$GARTER"
+export PS1="$HAXXOR"
 export PS2="$SIMPLE"
 export PS3="$SIMPLE"
 export PS4="$SIMPLE"

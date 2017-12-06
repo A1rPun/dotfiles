@@ -28,10 +28,6 @@
 "notify-send -a ponymix "Volume $(ponymix -d 0 decrease 5)""
   XF86AudioLowerVolume
 
-# Log out
-"xfce4-session-logout -l"
-  Mod4 + l
-
 # Spawn terminal
 "xfce4-terminal"
   Mod4 + t
@@ -46,4 +42,4 @@
 
 # Window switch
 "rofi -show"
-  Mod4 + Tab
+  Shift+Mod4 + space

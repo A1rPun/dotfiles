@@ -3,7 +3,7 @@
 
 rofi.modi:                           window,run,ssh
 rofi.width:                          20
-rofi.lines:                          2
+rofi.lines:                          5
 rofi.disable-history:                false
 ! Border width
 rofi.bw:                             1

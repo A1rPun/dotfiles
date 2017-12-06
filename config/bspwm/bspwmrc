@@ -1,0 +1,38 @@
+#!/bin/sh
+# My bspwm config
+# ~/.config/bspwm/bspwmrc
+
+# Borders
+bspc config border_width 2
+bspc config normal_border_color "#cccccc"
+bspc config active_border_color "#cccccc"
+bspc config focused_border_color "#00ff00"
+
+# Windows
+bspc config presel_feedback_color "#00ff00"
+bspc config window_gap 4
+bspc config split_ratio 0.5
+bspc config focus_by_distance true
+bspc config initial_polarity second_child
+
+## Monitors
+bspc config remove_unplugged_monitors true
+bspc config remove_disabled_monitors true
+
+## Mouse
+bspc config click_to_focus true
+bspc config pointer_motion_interval 10
+bspc config pointer_follows_monitor true
+
+## Desktops
+bspc monitor -d 1 2 3 4
+
+# Rules
+bspc config external_rules_command "~/.config/bspwm/bspwm_rules"
+
+# Finally autostart progs
+sxhkd 0 &
+xbindkeys &
+compton -b &
+xfce4-panel &
+~/.fehbg &
