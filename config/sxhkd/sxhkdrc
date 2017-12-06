@@ -53,9 +53,13 @@ super + {Left,Right}
 super + grave
 	bspc desktop --focus last
 
-# focus or move the node in the given direction
+# focus the node in the given direction
+super + {w,d,s,a}
+	bspc node --focus {north,east,south,west}
+
+# swap the node in the given direction
 super + shift + {w,d,s,a}
-	bspc node --{focus,swap} {north,east,south,west}
+	bspc node --swap {north,east,south,west}
 
 # cycle through nodes, ignoring sticky ones (workrave)
 super + {Tab, shift+Tab}
