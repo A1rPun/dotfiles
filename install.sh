@@ -8,6 +8,14 @@ linkFile() {
   ln -sri "$1" ~/"$2"
 }
 
+makeExecutable() {
+  chmod u+x "$1"
+}
+
+makeDirIfNotExists() {
+  mkdir -p "$1"
+}
+
 echoo "This script will make symlinks from the current git directory to root"
 # bashrc
 echoo "Link .bashrc"
@@ -20,21 +28,27 @@ echoo "Link .xbindkeysrc"
 linkFile "./bash/.xbindkeysrc"
 # bspwm
 echoo "Link bspwm"
-mkdir -p ~/.config/bspwm
-chmod u+x "./config/bspwm/bspwmrc"
+makeDirIfNotExists ~/.config/bspwm
+makeExecutable "./config/bspwm/bspwmrc"
 linkFile "./config/bspwm/bspwmrc" ".config/bspwm/bspwmrc"
 linkFile "./config/bspwm/bspwm_rules" ".config/bspwm/bspwm_rules"
 # sxhkd
 echoo "Link sxhkd"
-mkdir -p ~/.config/sxhkd
+makeDirIfNotExists ~/.config/sxhkd
 linkFile "./config/sxhkd/sxhkdrc" ".config/sxhkd/sxhkdrc"
 # Dunst
 echoo "Link Dunst"
-mkdir -p ~/.config/dunst
+makeDirIfNotExists ~/.config/dunst
 linkFile "./config/dunst/dunstrc" ".config/dunst/dunstrc"
 # Rofi
 echoo "Link Rofi"
-mkdir -p ~/.config/rofi
+makeDirIfNotExists ~/.config/rofi
 linkFile "./config/rofi/config" ".config/rofi/config"
+# Polybar
+echoo "Link Polybar"
+makeDirIfNotExists ~/.config/polybar
+linkFile "./config/polybar/config" ".config/polybar/config"
+makeExecutable "./config/polybar/pkg.sh"
+linkFile "./config/polybar/pkg.sh" ".config/polybar/pkg.sh"
 
 echoo "Done installing dotfiles"
