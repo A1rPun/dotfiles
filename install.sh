@@ -50,5 +50,9 @@ makeDirIfNotExists ~/.config/polybar
 linkFile "./config/polybar/config" ".config/polybar/config"
 makeExecutable "./config/polybar/pkg.sh"
 linkFile "./config/polybar/pkg.sh" ".config/polybar/pkg.sh"
+# cava
+echoo "Link cava"
+makeDirIfNotExists ~/.config/cava
+linkFile "./config/cava/config" ".config/cava/config"
 
 echoo "Done installing dotfiles"
