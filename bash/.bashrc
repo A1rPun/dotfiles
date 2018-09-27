@@ -13,15 +13,16 @@ alias ll="ls -l"
 alias la="ls -la"
 alias last="history 10"
 alias rimraf="rm -rf"
+# Queries
 alias qp="ps faux | grep"
 ## Arch
 alias s="sudo"
 alias pls='sudo $(fc -ln -1)'
-alias archupdate="yaourt -Syy"
-alias archupgrade="yaourt -Su"
-alias archaur="yaourt -Su --aur"
-alias ya="yaourt -S"
-alias yas="yaourt -ss"
+alias archupdate="yay -Syy"
+alias archupgrade="yay -Su"
+alias archorphan="yay -Qdt | awk '{print $1}' | xargs yay -Qi | awk -F ':' '/Name/ {print $0} /Installed Size/ {print $2}'"
+alias ya="yay -S"
+alias yas="yay -Ss"
 alias updategrub="grub-mkconfig -o /boot/grub/grub.cfg"
 ## Termux
 alias ins="apt-get install"
@@ -47,7 +48,7 @@ alias ht="htop --sort-key=PERCENT_MEM"
 ### Mpv
 alias shf="mpv -vo null --shuffle --msg-level=ao=fatal"
 ### Speedometer
-alias wt="speedometer -l -r wlp3s0 -t wlp3s0 -m $(( 1024 * 1024 * 3 / 2 ))"
+alias wt="speedometer -l -r wlp3s0 -t wlp3s0 -m $(( 1024 * 1024 * 3 / 2 )) -b"
 
 # Functions
 ## Extract archive
@@ -77,7 +78,7 @@ ipscan(){
   nmap -sn --system-dns "$1.1-254/24"
 }
 # Copyright (c) 2017 - Paradoxis
-GORDON_INSULTS=~/git/Gordon/insults
+GORDON_INSULTS=~/projects/git/_other/Gordon/insults
 gordon() {
     if [[ $? != 0 && -d $GORDON_INSULTS ]]; then
         insult=$(ls $GORDON_INSULTS | shuf -n 1)
