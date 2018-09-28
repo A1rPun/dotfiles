@@ -47,7 +47,7 @@ alias gdc="gd --compact"
 ### Htop
 alias ht="htop --sort-key=PERCENT_MEM"
 ### Mpv
-alias shf="mpv -vo null --shuffle --msg-level=ao=fatal"
+alias shf="mpv -vo null --shuffle --loop-playlist --msg-level=ao=fatal"
 ### Speedometer
 alias wt="speedometer -l -r wlp3s0 -t wlp3s0 -m $(( 1024 * 1024 * 3 / 2 )) -b"
 
