@@ -69,13 +69,3 @@
     foreground = "#ff0000"
     frame_color = "#ff0000"
     timeout = 0
-
-[sound]
-    appname = "ponymix"
-#    format  = "%s %p"
-    format  = "%s\n%b"
-    urgency = low
-    background = "#000000"
-    foreground = "#ffffff"
-    frame_color = "#ffffff"
-    timeout = 1
