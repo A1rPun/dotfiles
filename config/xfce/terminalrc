@@ -1,0 +1,36 @@
+# My xfce4-terminal config
+# ~/.config/xfce/terminal/terminalrc
+
+[Configuration]
+MiscAlwaysShowTabs=FALSE
+MiscBell=FALSE
+MiscBellUrgent=FALSE
+MiscBordersDefault=FALSE
+MiscCursorShape=TERMINAL_CURSOR_SHAPE_UNDERLINE
+MiscDefaultGeometry=80x24
+MiscInheritGeometry=FALSE
+MiscMenubarDefault=FALSE
+MiscMouseAutohide=FALSE
+MiscMouseWheelZoom=TRUE
+MiscToolbarDefault=FALSE
+MiscConfirmClose=FALSE
+MiscCycleTabs=TRUE
+MiscTabCloseButtons=TRUE
+MiscTabCloseMiddleClick=TRUE
+MiscTabPosition=GTK_POS_TOP
+MiscHighlightUrls=TRUE
+MiscMiddleClickOpensUri=FALSE
+MiscCopyOnSelect=FALSE
+MiscShowRelaunchDialog=TRUE
+MiscRewrapOnResize=TRUE
+MiscUseShiftArrowsToScroll=FALSE
+MiscSlimTabs=FALSE
+MiscNewTabAdjacent=FALSE
+ScrollingUnlimited=TRUE
+ScrollingBar=TERMINAL_SCROLLBAR_NONE
+FontName=Roboto Mono 12
+BackgroundDarkness=0.850000
+BackgroundMode=TERMINAL_BACKGROUND_TRANSPARENT
+ColorCursor=#8a8ae2e23434
+ColorCursorUseDefault=FALSE
+ColorPalette=#28282a2a2e2e;#a5a542424242;#8c8c94944040;#dede93935f5f;#5f5f81819d9d;#858567678f8f;#5e5e8d8d8787;#707078788080;#37373b3b4141;#cccc66666666;#b5b5bdbd6868;#f0f0c6c67474;#8181a2a2bebe;#b2b29494bbbb;#8a8abebeb7b7;#c5c5c8c8c6c6

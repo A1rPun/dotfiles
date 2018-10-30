@@ -18,20 +18,19 @@ alias qp="ps faux | grep"
 ## Arch
 alias s="sudo"
 alias pls='sudo $(fc -ln -1)'
+alias ya="yay -S"
+alias yas="yay -Ss"
+alias yar="yay -R"
 alias archupdate="yay -Syy"
 alias archupgrade="yay -Su"
 alias yorphanlist="yay -Qdt | awk '{print \$1}' | xargs yay -Qi | awk -F ':' '/Name/{printf \$2} /Installed Size/{print \$2;}'"
 alias yorphanclean="xargs -ra <(yay -Qdt | awk '{print \$1}') yay -Rcs"
-alias ya="yay -S"
-alias yas="yay -Ss"
 alias updategrub="grub-mkconfig -o /boot/grub/grub.cfg"
 ## Termux
 alias ins="apt-get install"
 ## Apps
 ### Asciinema
 alias ac="asciinema rec -w 2.5 -c '$PREFIX/bin/bash -l' demo.json"
-### Fortune
-alias lol="fortune | cowthink | toilet -f term --metal"
 ### Git
 alias gs="git status"
 alias gc="git commit -m"
@@ -75,8 +74,17 @@ extract () {
 }
 ## Scan network. Usage > "ipscan 192.168.1"
 ipscan(){
-#  nmap -sn "$1.1-254/24" | egrep "scan report" | cut -d " " -f 5
-  nmap -sn --system-dns "$1.1-254/24"
+  nmap -sn --system-dns "$1.*"
+}
+# Colorful manpages
+man() {
+    LESS_TERMCAP_md=$'\e[01;31m' \
+    LESS_TERMCAP_me=$'\e[0m' \
+    LESS_TERMCAP_se=$'\e[0m' \
+    LESS_TERMCAP_so=$'\e[01;44;33m' \
+    LESS_TERMCAP_ue=$'\e[0m' \
+    LESS_TERMCAP_us=$'\e[01;32m' \
+    command man "$@"
 }
 # Copyright (c) 2017 - Paradoxis
 GORDON_INSULTS=~/projects/git/_other/Gordon/insults
@@ -92,17 +100,17 @@ PROMPT_COMMAND=gordon
 # Terminal styles
 ## Colors
 DARKGREEN="\[\e[38;5;28m\]"
-GREEN="\[\e[38;5;41m\]" 
+GREEN="\[\e[38;5;41m\]"
 RED="\[\e[38;5;196m\]"
 LIGHTGREEN="\[\e[38;5;10m\]"
-YELLOW="\[\e[38;5;11m\]"
+NORMAL="\[\e[0m\]"
 ## Themes
-ARROWS="$DARKGREEN>$GREEN>$LIGHTGREEN> "
+ARROWS="$GREEN> $DARKGREEN\w $GREEN<\n$GREEN> $NORMAL"
 GARTER="\[\e[0;44;30m\] \u \[\e[0;104;34m\]▶\[\e[0;104;30m\] \H \[\e[0;46;94m\]▶\[\e[0;46;30m\] \w \[\e[0;106;36m\]▶\[\e[0;106;30m\] \# \[\e[0;49;96m\]▶\n\[\e[0;44;30m\] $ \[\e[0;49;34m\]▶\[\e[0;49;96m\]"
 HAXXOR="$RED┌─[$DARKGREEN\u$RED]─[$GREEN\H$RED]─[$LIGHTGREEN\w$RED]\n$RED└─\$$LIGHTGREEN"
-SIMPLE="$LIGHTGREEN> "
+SIMPLE="$LIGHTGREEN> $NORMAL"
 ## Export prompt screens
-export PS1="$HAXXOR"
+export PS1="$ARROWS"
 export PS2="$SIMPLE"
 export PS3="$SIMPLE"
 export PS4="$SIMPLE"

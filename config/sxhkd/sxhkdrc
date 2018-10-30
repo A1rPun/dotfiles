@@ -17,10 +17,6 @@ super + m
 super + {_,shift + } b
 	bspc node {--balance,--equalize}
 
-# rotate desktops.
-super + shift {period, comma}
-	bspc node @/ -R {90,270}
-
 # rotate selection
 super + {period, comma}
 	bspc node -R {90,270}
@@ -34,11 +30,11 @@ super + h
 	bspc query -N -n focused.tiled && state=floating || state=tiled; \
 	bspc node -t $state
 
-super + {shift + s,shift + f}
+super + {r,f}
 	bspc node -t {pseudo_tiled,fullscreen}
 
 # set the node flags
-super + ctrl + {x,l}
+super + {x,l}
 	bspc node -g {locked,sticky}
 
 #
@@ -68,15 +64,6 @@ super + {Tab, shift+Tab}
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
-
-##both send to and focus the given desktop
-#super + ctrl + {1-9,0}
-#	id=$(bspc query -N -n); bspc node -d ^{1-9,10}; bspc node -f ${id}
-
-#
-# focus the node for the given path jump
-super + {p,b,comma,period}
-	bspc node -f @{parent,brother,first,second}
 
 # swap the current node and the biggest node
 super + g

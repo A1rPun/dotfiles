@@ -4,10 +4,8 @@ class=$2
 instance=$3
 
 case "$instance" in
-	urxvt|termite|xfce4-terminal )
+	xfce4-terminal )
 		echo "state = tiled";;
-	#)
-	#	echo "layer = above";;
 	*)
 		echo "state = floating";;
 esac
