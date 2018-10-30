@@ -17,15 +17,15 @@
 # keystate_scrolllock= enable
 
 # Mute sound
-"ponymix toggle"
+"notify-send -a ponymix "Muted" -h int:value:$(ponymix toggle)"
   XF86AudioMute
 
 # Sound++
-"ponymix -d 0 increase 5"
+"notify-send -a ponymix "Volume" -h int:value:$(ponymix -d 0 increase 5)"
   XF86AudioRaiseVolume
 
 # Sound--
-"ponymix -d 0 decrease 5"
+"notify-send -a ponymix "Volume" -h int:value:$(ponymix -d 0 decrease 5)"
   XF86AudioLowerVolume
 
 # Spawn terminal

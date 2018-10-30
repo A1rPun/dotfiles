@@ -27,7 +27,7 @@
     word_wrap = yes
     ignore_newline = no
     stack_duplicates = true
-    hide_duplicate_count = false
+    hide_duplicate_count = true
     show_indicators = yes
     icon_position = off
     max_icon_size = 32
@@ -69,3 +69,12 @@
     foreground = "#ff0000"
     frame_color = "#ff0000"
     timeout = 0
+
+[sound]
+    appname = "ponymix"
+    format  = "%s %n%%"
+    urgency = low
+    background = "#000000"
+    foreground = "#ffffff"
+    frame_color = "#ffffff"
+    timeout = 3
