@@ -28,6 +28,16 @@
 "notify-send -a ponymix "Volume" -h int:value:$(ponymix -d 0 decrease 5)"
   XF86AudioLowerVolume
 
+# Asus keyboard backlight ++
+# Needs NOPASSWD entry in /etc/sudoers
+"sudo asus-kbd-backlight up"
+  XF86KbdBrightnessUp
+
+# Asus keyboard backlight --
+# Needs NOPASSWD entry in /etc/sudoers
+"sudo asus-kbd-backlight down"
+  XF86KbdBrightnessDown
+
 # Spawn terminal
 "xfce4-terminal"
   Mod4 + t
@@ -43,3 +53,15 @@
 # Window switch
 "rofi -show"
   Shift+Mod4 + space
+
+# Capture screen
+"scrot ~/Images/scrot/%Y-%m-%d_$wx$h_scrot.png"
+  Print
+
+# Capture focused window
+"scrot -u ~/Images/scrot/%Y-%m-%d_$wx$h_scrot.png"
+  Control + Print
+
+# Open network manager in terminal
+"xfce4-terminal -x nmtui"
+  Mod4 + n

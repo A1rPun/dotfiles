@@ -18,6 +18,7 @@ alias qp="ps faux | grep"
 ## Arch
 alias s="sudo"
 alias pls='sudo $(fc -ln -1)'
+alias yy="yay"
 alias ya="yay -S"
 alias yas="yay -Ss"
 alias yar="yay -R"
@@ -74,7 +75,20 @@ extract () {
 }
 ## Scan network. Usage > "ipscan 192.168.1"
 ipscan(){
-  nmap -sn --system-dns "$1.*"
+  local ipaddress=""
+  if [ -e $1 ] ; then
+    ipaddress=`ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}' | cut -f1  -d'/'`
+    echo "Current IP = $ipaddress"
+    ipaddress="${ipaddress%.*}.*"
+  else
+    ipaddress="$1.*"
+  fi
+  echo "IP range = $ipaddress"
+  if hash sudo 2>/dev/null; then
+    sudo nmap -sn --system-dns $ipaddress
+  else
+    nmap -sn --system-dns $ipaddress
+  fi
 }
 # Colorful manpages
 man() {

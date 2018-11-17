@@ -1,3 +1,5 @@
-#!/bin/bash
-pac=$(checkupdates 2> /dev/null | wc -l)
-echo "$pac %{F}"
+#!/bin/sh
+if ! updates=$(yay -Qu | wc -l); then
+    updates=0
+fi
+echo "$updates"

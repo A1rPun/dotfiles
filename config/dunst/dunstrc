@@ -5,10 +5,10 @@
     monitor = 0
     follow = mouse
     # [{width}]x{height}[+/-{x}+/-{y}]
-    geometry = "300x5-30+20"
+    geometry = "300x5-16+54"
     indicate_hidden = yes
     shrink = no
-    transparency = 0
+    transparency = 15
     notification_height = 0
     separator_height = 2
     padding = 8
@@ -49,7 +49,7 @@
     # Shortcuts are specified as [modifier+][modifier+]...key
     close = ctrl+space
     close_all = ctrl+shift+space
-    history = ctrl+grave
+    history = ctrl+shift+grave
     context = ctrl+shift+period
 
 [urgency_low]
