@@ -74,19 +74,20 @@ label-unmounted-foreground = ${colors.foreground-alt}
 
 [module/bspwm]
 type = internal/bspwm
+enable-scroll = false
 
-label-focused = %index%
+label-focused = %name%
 label-focused-background = ${colors.foreground-alt}
 label-focused-padding = 1
 
-label-occupied = %index%
+label-occupied = %name%
 label-occupied-padding = 1
 
-label-urgent = %index%!
+label-urgent = %name%!
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 1
 
-label-empty = %index%
+label-empty = %name%
 label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 1
 
@@ -175,10 +176,10 @@ format-full-prefix = " "
 
 format-discharging = <ramp-capacity> <label-discharging>
 
-ramp-capacity-0 = %{F#555}%{F#ff0000}
-ramp-capacity-1 = %{F#555}%{F#33ff33}
-ramp-capacity-2 = %{F#555}%{F#dfdfdf}
-ramp-capacity-3 = %{F#555}%{F#dfdfdf}
+ramp-capacity-0 = %{F#555}%{F#8b0000}
+ramp-capacity-1 = %{F#555}%{F#ff8c00}
+ramp-capacity-2 = %{F#555}%{F#9b870c}
+ramp-capacity-3 = %{F#555}%{F#006400}
 ramp-capacity-4 = %{F#555}%{F#dfdfdf}
 
 animation-charging-0 = 

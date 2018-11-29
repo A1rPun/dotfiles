@@ -55,11 +55,11 @@
   Shift+Mod4 + space
 
 # Capture screen
-"scrot ~/Images/scrot/%Y-%m-%d_$wx$h_scrot.png"
+"maim -s ~/Images/$(date +%s).png"
   Print
 
 # Capture focused window
-"scrot -u ~/Images/scrot/%Y-%m-%d_$wx$h_scrot.png"
+"maim -i $(xdotool getactivewindow) ~/Images/$(date +%s).png"
   Control + Print
 
 # Open network manager in terminal

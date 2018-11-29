@@ -25,14 +25,22 @@ bspc config pointer_motion_interval 10
 bspc config pointer_follows_monitor true
 
 ## Desktops
-bspc monitor -d 1 2 3 4
+bspc monitor -d    
+
+# Apps
+bspc rule -a code desktop=^2
+bspc rule -a Firefox desktop=^3
+bspc rule -a TeamViewer state=floating
 
 # Rules
-bspc config external_rules_command "~/.config/bspwm/bspwm_rules"
+#bspc config external_rules_command "~/.config/bspwm/bspwm_rules"
 
 # Finally autostart progs
-sxhkd &
-xbindkeys &
 ~/.fehbg &
-polybar a1r &
 compton -b &
+parcellite -n &
+polybar a1r &
+sxhkd &
+udiskie -2 -s &
+xbindkeys &
+xscreensaver -nosplash &

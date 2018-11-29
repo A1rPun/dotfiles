@@ -15,6 +15,7 @@ alias last="history 10"
 alias rimraf="rm -rf"
 # Queries
 alias qp="ps faux | grep"
+alias qw="xprop |awk '/WM_CLASS/{print $4}'"
 ## Arch
 alias s="sudo"
 alias pls='sudo $(fc -ln -1)'
@@ -50,6 +51,7 @@ alias ht="htop --sort-key=PERCENT_MEM"
 alias shf="mpv -vo null --shuffle --loop-playlist --msg-level=ao=fatal"
 ### Speedometer
 alias wt="speedometer -l -r wlp3s0 -t wlp3s0 -m $(( 1024 * 1024 * 3 / 2 )) -b"
+alias nt="speedometer -l -r enp2s0 -t enp2s0 -m $(( 1024 * 1024 * 3 / 2 )) -b"
 
 # Functions
 ## Extract archive

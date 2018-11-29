@@ -94,7 +94,7 @@ super + ctrl + shift + space
 #
 
 #fetch current window to last preselection on the current desktop
-super + f
+super + q
 	bspc node -n 'last.!automatic.local'
 
 # expand a window by moving one of its side outward
