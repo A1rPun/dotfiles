@@ -3,14 +3,29 @@
 # Alias
 ## For pipes |
 RAINBOW="toilet -f term --gay"
-## pen this file
+## Open this file
 alias nb="nano ~/.bashrc"
+## Application Colors!
+alias ls="ls --color=auto"
+alias diff="diff --color=auto"
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+man() {
+    LESS_TERMCAP_md=$'\e[01;31m' \
+    LESS_TERMCAP_me=$'\e[0m' \
+    LESS_TERMCAP_se=$'\e[0m' \
+    LESS_TERMCAP_so=$'\e[01;44;33m' \
+    LESS_TERMCAP_ue=$'\e[0m' \
+    LESS_TERMCAP_us=$'\e[01;32m' \
+    command man "$@"
+}
+export GREP_COLOR="49;32"
 ## General
 alias ..="cd .."
 alias cd..="cd .."
-alias ls="ls --color=auto"
-alias ll="ls -l"
-alias la="ls -la"
+alias ll="ls -lF"
+alias la="ls -lAF"
 alias last="history 10"
 alias rimraf="rm -rf"
 # Queries
@@ -21,6 +36,8 @@ alias s="sudo"
 alias pls='sudo $(fc -ln -1)'
 alias yy="yay"
 alias ya="yay -S"
+alias yi="yay -Qte"
+alias yu="yay -Qu"
 alias yas="yay -Ss"
 alias yar="yay -R"
 alias archupdate="yay -Syy"
@@ -92,16 +109,6 @@ ipscan(){
     nmap -sn --system-dns $ipaddress
   fi
 }
-# Colorful manpages
-man() {
-    LESS_TERMCAP_md=$'\e[01;31m' \
-    LESS_TERMCAP_me=$'\e[0m' \
-    LESS_TERMCAP_se=$'\e[0m' \
-    LESS_TERMCAP_so=$'\e[01;44;33m' \
-    LESS_TERMCAP_ue=$'\e[0m' \
-    LESS_TERMCAP_us=$'\e[01;32m' \
-    command man "$@"
-}
 # Copyright (c) 2017 - Paradoxis
 GORDON_INSULTS=~/projects/git/_other/Gordon/insults
 gordon() {
@@ -112,6 +119,10 @@ gordon() {
     fi
 }
 PROMPT_COMMAND=gordon
+# Print all colors
+colors() {
+  (x=`tput op` y=`printf %76s`;for i in {0..256};do o=00$i;echo -e ${o:${#o}-3:3} `tput setaf $i;tput setab $i`${y// /=}$x;done)
+}
 
 # Terminal styles
 ## Colors

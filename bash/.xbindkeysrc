@@ -38,6 +38,7 @@
 "sudo asus-kbd-backlight down"
   XF86KbdBrightnessDown
 
+
 # Spawn terminal
 "xfce4-terminal"
   Mod4 + t
@@ -45,6 +46,11 @@
 # Spawn explorer
 "thunar"
   Mod4 + e
+
+# Open network manager in terminal
+"xfce4-terminal -x nmtui"
+  Mod4 + n
+
 
 # App finder
 "rofi -show run"
@@ -54,14 +60,27 @@
 "rofi -show"
   Shift+Mod4 + space
 
+
 # Capture screen
-"maim -s ~/Images/$(date +%s).png"
+"maim -s -r hippie -b 10 -c 1,1,1 ~/Images/$(date +%s).png"
   Print
 
 # Capture focused window
 "maim -i $(xdotool getactivewindow) ~/Images/$(date +%s).png"
   Control + Print
 
-# Open network manager in terminal
-"xfce4-terminal -x nmtui"
-  Mod4 + n
+# Zoom part of screen
+"slop -b 0 -r relscrzoom"
+  Mod4 + z
+
+# Gif capture part of screen
+"capture_gif"
+  Mod4 + bracketleft
+
+# Video capture part of screen
+"capture_screen"
+  Mod4 + bracketright
+
+# Stop all video capturing
+"killall ffmpeg"
+  Shift+Mod4 + bracketleft

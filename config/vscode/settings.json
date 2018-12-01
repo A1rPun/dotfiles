@@ -1,6 +1,12 @@
 /* VSCode User settings.json */
 {
-    "gitlens.codeLens.authors.enabled": false,
-    "gitlens.codeLens.recentChange.enabled": false,
-    "workbench.iconTheme": "vscode-icons"
+  "telemetry.enableTelemetry": false,
+  "telemetry.enableCrashReporter": false,
+  "workbench.iconTheme": "vscode-icons",
+  "git.confirmSync": false,
+  /* GitLens */
+  "gitlens.currentLine.enabled": false,
+  "gitlens.currentLine.scrollable": false,
+  "gitlens.codeLens.authors.enabled": false,
+  "gitlens.codeLens.recentChange.enabled": false
 }

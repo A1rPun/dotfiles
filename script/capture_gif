@@ -1,0 +1,4 @@
+#!/bin/bash
+slop=$(slop -f "%x %y %w %h %g %i" -r hippie -b 10 -c 1,1,1) || exit 1
+read -r X Y W H G ID < <(echo $slop)
+ffmpeg -r 10 -f x11grab -s "$W"x"$H" -i :0.0+$X,$Y -t 10 ~/$(date +%s).gif
