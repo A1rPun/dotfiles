@@ -109,6 +109,9 @@ ipscan(){
     nmap -sn --system-dns $ipaddress
   fi
 }
+github() {
+  git clone "https://github.com/$1"
+}
 # Copyright (c) 2017 - Paradoxis
 GORDON_INSULTS=~/projects/git/_other/Gordon/insults
 gordon() {
