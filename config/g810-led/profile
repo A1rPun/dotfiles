@@ -1,7 +1,8 @@
-# Rainbow profile 
+# Rainbow profile
 # /etc/g810-led/profile
 
 fx hwave all ff
 fx cycle logo ff
+g indicators 00ff00
 
 c # Commit changes

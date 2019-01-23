@@ -29,6 +29,7 @@ bspc monitor -d    
 
 # Apps
 bspc rule -a code desktop=^2
+bspc rule -a code-oss desktop=^2
 bspc rule -a Firefox desktop=^3
 bspc rule -a TeamViewer state=floating
 

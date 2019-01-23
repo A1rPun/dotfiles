@@ -62,11 +62,11 @@
 
 
 # Capture screen
-"maim -s -r hippie -b 10 -c 1,1,1 ~/Images/$(date +%s).png"
+"maim -u ~/Images/$(date +%s).png"
   Print
 
 # Capture focused window
-"maim -i $(xdotool getactivewindow) ~/Images/$(date +%s).png"
+"maim -u -s -r hippie -b 10 -c 1,1,1 ~/Images/$(date +%s).png"
   Control + Print
 
 # Zoom part of screen
