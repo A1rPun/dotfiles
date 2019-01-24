@@ -28,9 +28,12 @@ alias ll="ls -lF"
 alias la="ls -lAF"
 alias last="history 10"
 alias rimraf="rm -rf"
+alias whereami="pwd -P"
 # Queries
 alias qp="ps faux | grep"
 alias qw="xprop |awk '/WM_CLASS/{print $4}'"
+alias qt="grep -C 2 -R"
+alias qf="find . | grep"
 ## Arch
 alias s="sudo"
 alias pls='sudo $(fc -ln -1)'
@@ -51,10 +54,13 @@ alias ins="apt-get install"
 ### Asciinema
 alias ac="asciinema rec -w 2.5 -c '$PREFIX/bin/bash -l' demo.json"
 ### Git
+alias gai="git add -p"
+alias gri="git reset -p"
+alias gci="git checkout -p"
 alias gs="git status"
 alias gc="git commit -m"
+alias ff="git diff"
 alias gg="git pull"
-alias df="git diff"
 alias gp="git push"
 alias go="git checkout"
 alias gl="git log --pretty=format:\"%h %s\" --graph"
@@ -125,6 +131,10 @@ PROMPT_COMMAND=gordon
 # Print all colors
 colors() {
   (x=`tput op` y=`printf %76s`;for i in {0..256};do o=00$i;echo -e ${o:${#o}-3:3} `tput setaf $i;tput setab $i`${y// /=}$x;done)
+}
+
+function parse_git_branch {
+  echo -n $(git branch --no-color 2>/dev/null | awk -v out=$1 '/^*/ { if(out=="") print $2; else print out}')
 }
 
 # Terminal styles
