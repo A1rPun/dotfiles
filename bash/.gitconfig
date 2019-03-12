@@ -10,16 +10,16 @@
   remote = green
 [color "diff"]
   meta = yellow bold
-  frag = orange bold
+  frag = blue bold
   old = red bold
   new = green bold
 [color "status"]
   added = yellow
   changed = green
-  untracked = orange
+  untracked = blue
 [alias]
-  lol = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold green)<%an>%Creset' --abbrev-commit
-  lola = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold green)<%an>%Creset' --abbrev-commit --all
+  lol = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(dim green)(%cr) %C(bold green)<%an>%Creset' --abbrev-commit
+  lola = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(dim green)(%cr) %C(bold green)<%an>%Creset' --abbrev-commit --all
   ls = ls-files
   ignored = ls-files -o -i --exclude-standard
   undo = reset HEAD~1 --soft
