@@ -1,0 +1,25 @@
+[color]
+  ui = true
+  status = auto
+  branch = auto
+  interactive = auto
+  diff = auto
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = orange bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = orange
+[alias]
+  lol = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold green)<%an>%Creset' --abbrev-commit
+  lola = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold green)<%an>%Creset' --abbrev-commit --all
+  ls = ls-files
+  ignored = ls-files -o -i --exclude-standard
+  undo = reset HEAD~1 --soft

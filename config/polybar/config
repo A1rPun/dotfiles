@@ -220,10 +220,10 @@ label-separator-foreground = ${colors.foreground-alt}
 
 menu-0-0 = ""
 menu-0-0-exec = reboot
-menu-0-1 = ""
-menu-0-1-exec = poweroff
-menu-0-2 = ""
-menu-0-2-exec = suspend
+menu-0-1 = ""
+menu-0-1-exec = systemctl suspend
+menu-0-2 = ""
+menu-0-2-exec = poweroff
 
 [module/pkg]
 type = custom/script
