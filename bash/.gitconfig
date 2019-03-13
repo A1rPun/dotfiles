@@ -1,22 +1,44 @@
 [color]
   ui = true
-  status = auto
   branch = auto
-  interactive = auto
   diff = auto
+  grep = auto
+  interactive = auto
+  status = auto
 [color "branch"]
-  current = yellow reverse
-  local = yellow
+  current = green reverse
+  local = red
   remote = green
+  upstream = cyan
 [color "diff"]
-  meta = yellow bold
+  commit = green reverse
   frag = blue bold
-  old = red bold
+  meta = black bold
   new = green bold
+  old = red bold
+  whitespace = white
+[color "grep"]
+  filename = white
+  function = blue
+  linenumber = cyan
+  match = green
+  matchContext = green
+  matchSelected = green reverse
+  selected = green
+  separator = cyan
+[color "interactive"]
+  changed = green reverse
+  error = red reverse
+  help = blue reverse
+  prompt = cyan bold
 [color "status"]
-  added = yellow
+  added = green bold
+  branch = green reverse
   changed = green
-  untracked = blue
+  header = white
+  nobranch = red
+  unmerged = red
+  untracked = yellow
 [alias]
   lol = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(dim green)(%cr) %C(bold green)<%an>%Creset' --abbrev-commit
   lola = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %C(dim green)(%cr) %C(bold green)<%an>%Creset' --abbrev-commit --all
