@@ -136,23 +136,26 @@ colors() {
   (x=`tput op` y=`printf %76s`;for i in {0..256};do o=00$i;echo -e ${o:${#o}-3:3} `tput setaf $i;tput setab $i`${y// /=}$x;done)
 }
 
-function parse_git_branch {
-  echo -n $(git branch --no-color 2>/dev/null | awk -v out=$1 '/^*/ { if(out=="") print $2; else print out}')
+git_branch() {
+  local branch=`git branch 2>/dev/null | grep '^*' | colrm 1 2`
+  echo $([ "$branch" ] && echo "[$branch]" || echo "")
 }
 
 # Terminal styles
 ## Colors
 DARKGREEN="\[\e[38;5;28m\]"
-GREEN="\[\e[38;5;41m\]"
-RED="\[\e[38;5;196m\]"
-LIGHTGREEN="\[\e[38;5;10m\]"
+RED="\[\e[38;5;9m\]"
+ORANGE="\[\e[38;5;214m\]"
+YELLOW="\[\e[38;5;11m\]"
+GREEN="\[\e[38;5;10m\]"
+CYAN="\[\e[38;5;14m\]"
+BLUE="\[\e[38;5;12m\]"
+MAGENTA="\[\e[38;5;5m\]"
 NORMAL="\[\e[0m\]"
 ## Themes
-ARROWS="$GREEN> $DARKGREEN\w $GREEN<\n$GREEN> $NORMAL"
-GARTER="\[\e[0;44;30m\] \u \[\e[0;104;34m\]▶\[\e[0;104;30m\] \H \[\e[0;46;94m\]▶\[\e[0;46;30m\] \w \[\e[0;106;36m\]▶\[\e[0;106;30m\] \# \[\e[0;49;96m\]▶\n\[\e[0;44;30m\] $ \[\e[0;49;34m\]▶\[\e[0;49;96m\]"
-HAXXOR="$RED┌─[$DARKGREEN\u$RED]─[$GREEN\H$RED]─[$LIGHTGREEN\w$RED]\n$RED└─\$$LIGHTGREEN"
-SIMPLE="$LIGHTGREEN> $NORMAL"
-R41NB0W="\[\e[38;5;9m\][\[\e[38;5;214m\]\h\[\e[38;5;11m\]][\[\e[38;5;10m\]\u\[\e[38;5;14m\]][\[\e[38;5;12m\]\w\[\e[38;5;5m\]]\n$LIGHTGREEN> $NORMAL"
+HAXXOR="$RED┌─[$DARKGREEN\u$RED]─[$GREEN\H$RED]─[$DARKGREEN\w$RED]\n$RED└─\$$GREEN"
+SIMPLE="$GREEN> $NORMAL"
+R41NB0W="$RED┌─[$ORANGE\h$YELLOW][$GREEN\u$CYAN][$BLUE\w$MAGENTA]\$(git_branch)\n$RED└»$NORMAL "
 ## Export prompt screens
 export PS1="$R41NB0W"
 export PS2="$SIMPLE"
