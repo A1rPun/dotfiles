@@ -62,12 +62,12 @@
 
 
 # Capture screen
-"maim -u ~/Images/$(date +%s).png"
+"maim -s -r hippie -b 10 -c 1,1,1 ~/Images/$(date +%s).png"
   Print
 
-# Capture focused window
-"maim -u -s -r hippie -b 10 -c 1,1,1 ~/Images/$(date +%s).png"
-  Control + Print
+# Capture entire screen
+"maim ~/Images/$(date +%s).png"
+  Mod4 + Print
 
 # Zoom part of screen
 "slop -b 0 -r relscrzoom"

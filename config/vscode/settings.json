@@ -1,12 +1,18 @@
 /* VSCode User settings.json */
 {
+  /* Theming */
+  "editor.fontFamily": "'Hack', 'Roboto Mono', 'monospace', monospace",
+  "workbench.iconTheme": "vscode-icons",
+  /* General */
+  "files.trimTrailingWhitespace": true,
   "telemetry.enableTelemetry": false,
   "telemetry.enableCrashReporter": false,
-  "workbench.iconTheme": "vscode-icons",
+  /* Git */
   "git.confirmSync": false,
+  "git.enableSmartCommit": true,
   /* GitLens */
+  "gitlens.advanced.telemetry.enabled": false,
   "gitlens.currentLine.enabled": false,
-  "gitlens.currentLine.scrollable": false,
   "gitlens.codeLens.authors.enabled": false,
   "gitlens.codeLens.recentChange.enabled": false
 }
