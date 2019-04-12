@@ -136,10 +136,27 @@ colors() {
   (x=`tput op` y=`printf %76s`;for i in {0..256};do o=00$i;echo -e ${o:${#o}-3:3} `tput setaf $i;tput setab $i`${y// /=}$x;done)
 }
 
-git_branch() {
-  local branch=`git branch 2>/dev/null | grep '^*' | colrm 1 2`
-  echo $([ "$branch" ] && echo "[$branch]" || echo "")
+# Source https://github.com/jimeh/git-aware-prompt
+find_git_branch() {
+  local branch
+  if branch=$(git rev-parse --abbrev-ref HEAD 2> /dev/null); then
+    if [[ "$branch" == "HEAD" ]]; then
+      branch='detached*'
+    fi
+    git_branch="[$branch]"
+  else
+    git_branch=""
+  fi
 }
+find_git_dirty() {
+  local status=$(git status --porcelain 2> /dev/null)
+  if [[ "$status" != "" ]]; then
+    git_dirty='*'
+  else
+    git_dirty=''
+  fi
+}
+PROMPT_COMMAND="find_git_branch; find_git_dirty; $PROMPT_COMMAND"
 
 # Terminal styles
 ## Colors
@@ -155,9 +172,10 @@ NORMAL="\[\e[0m\]"
 ## Themes
 HAXXOR="$RED┌─[$DARKGREEN\u$RED]─[$GREEN\H$RED]─[$DARKGREEN\w$RED]\n$RED└─\$$GREEN"
 SIMPLE="$GREEN> $NORMAL"
-R41NB0W="$RED┌─[$ORANGE\h$YELLOW][$GREEN\u$CYAN][$BLUE\w$MAGENTA]\$(git_branch)\n$RED└»$NORMAL "
+R41NB0W="$RED┌─[$ORANGE\h$YELLOW][$GREEN\u$CYAN][$BLUE\w$MAGENTA]\$git_branch\$git_dirty\n$RED└»$NORMAL "
 ## Export prompt screens
 export PS1="$R41NB0W"
+export SUDO_PS1="$R41NB0W"
 export PS2="$SIMPLE"
 export PS3="$SIMPLE"
 export PS4="$SIMPLE"
