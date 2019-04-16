@@ -3,7 +3,7 @@
 
 # quit bspwm normally
 # super + Escape
-# 	bspc quit
+#	bspc quit
 
 # close and kill
 alt + F4
@@ -18,8 +18,8 @@ super + {_,shift + } b
 	bspc node {--balance,--equalize}
 
 # rotate selection
-super + {period, comma}
-	bspc node -R {90,270}
+# super + {period, comma}
+#	bspc node -R {90,270}
 
 #
 # state/flags
@@ -104,6 +104,10 @@ super + alt + {w,d,s,a}
 # contract a window by moving one of its side inward
 super + alt + ctrl + {w,d,s,a}
 	bspc node -z {bottom 0 -20,left 20 0,top 0 20,right -20 0}
+
+# change gutter size
+super + {period, comma}
+	bspc config -m ^1 window_gap {2, 32}
 
 #
 # Recepticles
