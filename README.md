@@ -33,6 +33,9 @@ My personal collection of dotfiles. Free to copy or distribute.
 - ponymix
 - xscreensaver
 
+## Useful tricks
+- In `htop` use F2 to customize
+
 ## Useful links
 
 - [Colorize stuff](https://wiki.archlinux.org/index.php/Color_output_in_console)

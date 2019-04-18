@@ -29,6 +29,7 @@ alias la="ls -lAF"
 alias last="history 10"
 alias rimraf="rm -rf"
 alias whereami="pwd -P"
+alias dua="du -hsc *"
 # Queries
 alias qp="ps faux | grep"
 alias qw="xdotool search . behave %@ focus getwindowname"
