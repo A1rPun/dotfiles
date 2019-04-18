@@ -50,7 +50,12 @@ alias yorphanlist="yay -Qdt | awk '{print \$1}' | xargs yay -Qi | awk -F ':' '/N
 alias yorphanclean="xargs -ra <(yay -Qdt | awk '{print \$1}') yay -Rcs"
 alias updategrub="grub-mkconfig -o /boot/grub/grub.cfg"
 ## Termux
-alias ins="apt-get install"
+alias tmuxi="pkg install"
+alias tmuxupgrade="pkg upgrade"
+alias tmuxr="pkg uninstall"
+## Languages
+alias py="python"
+alias js="node"
 ## Apps
 ### Asciinema
 alias ac="asciinema rec -w 2.5 -c '$PREFIX/bin/bash -l' demo.json"
@@ -69,6 +74,7 @@ alias gor="git remote show origin"
 alias gl="git log --pretty=format:\"%h %s\" --graph"
 alias gb="git checkout -b"
 alias yolo="git add ."
+alias up="git for-each-ref --format='%(refname:short) -> %(upstream:short)' refs/heads"
 ### GitDaily
 alias gd="gitdaily --all"
 alias gdc="gd --compact"
@@ -140,6 +146,13 @@ colors() {
 md() {
   fileName=${1:-"README.md"}
   mdp "$fileName"
+}
+# count files & folders
+count() {
+  local count=`ls | wc -l`
+  local countd=`ls -l | grep ^d -c`
+  local countf=`ls -l | grep ^- -c`
+  echo -e "Total:\t$count\nDir:\t$countd\nFile:\t$countf"
 }
 
 # Set up git variables for PS1
