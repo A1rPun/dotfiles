@@ -22,8 +22,6 @@ man() {
 }
 export GREP_COLOR="49;32"
 ## General
-alias ..="cd .."
-alias cd..="cd .."
 alias ll="ls -lF"
 alias la="ls -lAF"
 alias last="history 10"
@@ -212,3 +210,4 @@ export HISTCONTROL=erasedups:ignorespace
 export HISTSIZE=1000
 shopt -s histappend
 shopt -s checkwinsize
+shopt -s autocd
