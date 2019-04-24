@@ -44,7 +44,10 @@ alias qt="grep -C 2 -R"
 alias qf="find . | grep"
 ## Languages
 alias py="python"
+alias pi="ipython"
 alias js="node"
+alias r="Rscript"
+alias ri="R --quiet"
 ## Apps
 ### Asciinema
 alias ac="asciinema rec -w 2.5 -c '$PREFIX/bin/bash -l' demo.json"
