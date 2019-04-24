@@ -1,0 +1,4 @@
+# Termux
+alias tmuxi="pkg install"
+alias tmuxupgrade="pkg upgrade"
+alias tmuxr="pkg uninstall"

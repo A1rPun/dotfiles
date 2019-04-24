@@ -1,6 +1,15 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 # Alias
+if [ -f "$HOME/.aliases" ]; then
+  . "$HOME/.aliases"
+fi
+if [ -f "$HOME/.alias_arch" ]; then
+  . "$HOME/.alias_arch"
+fi
+if [ -f "$HOME/.alias_termux" ]; then
+  . "$HOME/.alias_termux"
+fi
 ## For pipes |
 RAINBOW="toilet -f term --gay"
 ## Open this file
@@ -33,24 +42,6 @@ alias qp="ps faux | grep"
 alias qw="xdotool search . behave %@ focus getwindowname"
 alias qt="grep -C 2 -R"
 alias qf="find . | grep"
-## Arch
-alias s="sudo"
-alias pls='sudo $(fc -ln -1)'
-alias yy="yay"
-alias ya="yay -S"
-alias yi="yay -Qte"
-alias yu="yay -Qu"
-alias yas="yay -Ss"
-alias yar="yay -R"
-alias archupdate="yay -Syy"
-alias archupgrade="yay -Su"
-alias yorphanlist="yay -Qdt | awk '{print \$1}' | xargs yay -Qi | awk -F ':' '/Name/{printf \$2} /Installed Size/{print \$2;}'"
-alias yorphanclean="xargs -ra <(yay -Qdt | awk '{print \$1}') yay -Rcs"
-alias updategrub="grub-mkconfig -o /boot/grub/grub.cfg"
-## Termux
-alias tmuxi="pkg install"
-alias tmuxupgrade="pkg upgrade"
-alias tmuxr="pkg uninstall"
 ## Languages
 alias py="python"
 alias js="node"

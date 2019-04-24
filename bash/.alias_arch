@@ -1,0 +1,14 @@
+# Arch
+alias s="sudo"
+alias pls='sudo $(fc -ln -1)'
+alias yy="yay"
+alias ya="yay -S"
+alias yi="yay -Qte"
+alias yu="yay -Qu"
+alias yas="yay -Ss"
+alias yar="yay -R"
+alias archupdate="yay -Syy"
+alias archupgrade="yay -Su"
+alias yorphanlist="yay -Qdt | awk '{print \$1}' | xargs yay -Qi | awk -F ':>
+alias yorphanclean="xargs -ra <(yay -Qdt | awk '{print \$1}') yay -Rcs"
+alias updategrub="grub-mkconfig -o /boot/grub/grub.cfg"
