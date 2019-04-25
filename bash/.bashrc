@@ -74,6 +74,8 @@ alias gdc="gd --compact"
 alias ht="htop --sort-key=PERCENT_MEM"
 ### Mpv
 alias shf="mpv -vo null --shuffle --loop-playlist --msg-level=ao=fatal"
+# NPM
+alias blackhole="npm install"
 ### Speedometer
 alias wt="speedometer -l -r wlp3s0 -t wlp3s0 -m $(( 1024 * 1024 * 3 / 2 )) -b"
 alias nt="speedometer -l -r enp2s0 -t enp2s0 -m $(( 1024 * 1024 * 3 / 2 )) -b"
@@ -118,18 +120,13 @@ ipscan(){
   fi
 }
 github() {
-  git clone "https://github.com/$1"
+  local split=(${1//\// })
+  local slength=${#split[@]}
+  local repo="${split[slength - 1]}"
+  local user="${split[slength - 2]}"
+  git clone "https://github.com/$user/$repo"
+  cd "$repo"
 }
-# Copyright (c) 2017 - Paradoxis
-GORDON_INSULTS=~/projects/git/_other/Gordon/insults
-gordon() {
-    if [[ $? != 0 && -d $GORDON_INSULTS ]]; then
-        insult=$(ls $GORDON_INSULTS | shuf -n 1)
-        mpv --really-quiet $GORDON_INSULTS/$insult &
-        disown
-    fi
-}
-PROMPT_COMMAND=gordon
 # Print all colors
 colors() {
   (x=`tput op` y=`printf %76s`;for i in {0..256};do o=00$i;echo -e ${o:${#o}-3:3} `tput setaf $i;tput setab $i`${y// /=}$x;done)

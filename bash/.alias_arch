@@ -12,3 +12,16 @@ alias archupgrade="yay -Su"
 alias yorphanlist="yay -Qdt | awk '{print \$1}' | xargs yay -Qi | awk -F ':' '/Name/{printf \$2} /Installed Size/{print \$2;}'"
 alias yorphanclean="xargs -ra <(yay -Qdt | awk '{print \$1}') yay -Rcs"
 alias updategrub="grub-mkconfig -o /boot/grub/grub.cfg"
+
+# Copyright (c) 2017 - Paradoxis
+# Modified (c) 2019 - A1rPun
+GORDON_INSULTS=~/projects/git/_other/Gordon/insults
+if [[ -d $GORDON_INSULTS ]]; then
+  gordon() {
+    if [[ $? != 0 ]]; then
+      insult=$(ls $GORDON_INSULTS | shuf -n 1)
+      mpv --really-quiet $GORDON_INSULTS/$insult & disown
+    fi
+  }
+  PROMPT_COMMAND="gordon; $PROMPT_COMMAND"
+fi

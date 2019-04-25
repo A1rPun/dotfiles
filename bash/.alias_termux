@@ -1,4 +1,6 @@
 # Termux
 alias tmuxi="pkg install"
-alias tmuxupgrade="pkg upgrade"
 alias tmuxr="pkg uninstall"
+alias tmuxs="pkg search"
+alias tmuxupgrade="pkg upgrade"
+alias tmuxinstalled="pkg list-installed"
