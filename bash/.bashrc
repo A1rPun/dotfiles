@@ -37,6 +37,7 @@ alias last="history 10"
 alias rimraf="rm -rf"
 alias whereami="pwd -P"
 alias dua="du -hsc *"
+alias cal="cal -m -w --color"
 # Queries
 alias qp="ps faux | grep"
 alias qw="xdotool search . behave %@ focus getwindowname"
@@ -75,6 +76,8 @@ alias ht="htop --sort-key=PERCENT_MEM"
 ### Mpv
 alias shf="mpv -vo null --shuffle --loop-playlist --msg-level=ao=fatal"
 # NPM
+alias npmupdate="npm install -g npm"
+alias npminstalled="npm list -g --depth=0"
 alias blackhole="npm install"
 ### Speedometer
 alias wt="speedometer -l -r wlp3s0 -t wlp3s0 -m $(( 1024 * 1024 * 3 / 2 )) -b"
@@ -172,7 +175,7 @@ find_git_upstream_count() {
     git_up_count=""
   fi
 }
-PROMPT_COMMAND="find_git_branch; find_git_dirty; find_git_upstream_count; $PROMPT_COMMAND"
+PROMPT_COMMAND="$PROMPT_COMMAND; find_git_branch; find_git_dirty; find_git_upstream_count"
 
 # Terminal styles
 ## Colors
