@@ -1,25 +1,5 @@
 #!/usr/bin/env bash
-echoo() {
-  local fmt="$1"; shift
-  printf "$fmt\n" "$@"
-}
-
-linkFile() {
-  ln -sri "$1" ~/"$2"
-}
-
-makeExecutable() {
-  chmod u+x "$1"
-}
-
-makeDirIfNotExists() {
-  mkdir -p "$1"
-}
-
-install() {
-  echoo "Installing package: $1"
-  pacman -S "$1" -y
-}
+. "install_base.sh"
 
 echoo "Installing A1rPun dotfiles"
 echoo "Downloading and installing needed packages"
@@ -73,7 +53,5 @@ linkFile "./config/rofi/config" ".config/rofi/config"
 echoo "Link sxhkd"
 makeDirIfNotExists ~/.config/sxhkd
 linkFile "./config/sxhkd/sxhkdrc" ".config/sxhkd/sxhkdrc"
-# TODO: vscode
-# TODO: xfce
 
 echoo "Done installing dotfiles"

@@ -1,16 +1,15 @@
 #!/usr/bin/env bash
-echoo() {
-  local fmt="$1"; shift
-  printf "$fmt\n" "$@"
-}
+. "install_base.sh"
 
-linkFile() {
-  ln -sri "$1" ~/"$2"
-}
-
+# bash_aliases
+echoo "Link .bash_aliases"
+linkFile "./bash/.bash_aliases"
 # bashrc
 echoo "Link .bashrc"
 linkFile "./bash/.bashrc"
 # inputrc
 echoo "Link .inputrc"
 linkFile "./bash/.inputrc"
+# vimrc
+echoo "Link .vimrc"
+linkFile "./bash/.vimrc"
