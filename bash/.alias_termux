@@ -4,3 +4,8 @@ alias tmuxr="pkg uninstall"
 alias tmuxs="pkg search"
 alias tmuxupgrade="pkg upgrade"
 alias tmuxinstalled="pkg list-installed"
+
+noop() {
+  :
+}
+PROMPT_COMMAND=noop
