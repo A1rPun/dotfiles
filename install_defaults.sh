@@ -13,3 +13,6 @@ linkFile "./bash/.inputrc"
 # vimrc
 echoo "Link .vimrc"
 linkFile "./bash/.vimrc"
+# alias_arch
+echoo "Link .alias_arch"
+linkFile "./bash/.alias_arch"
