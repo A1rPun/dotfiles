@@ -4,16 +4,14 @@ set mark-symlinked-directories on
 set input-meta on
 set output-meta on
 
-# Arrow up?
-"\e[B": history-search-forward
-# Arrow down?
+# Arrow up
 "\e[A": history-search-backward
-"\e[1;5C": forward-word
-"\e[1;5D": backward-word
+# Arrow down
+"\e[B": history-search-forward
+# Ctrl + Arrow right
 "\e[5C": forward-word
+# Ctrl + Arrow left
 "\e[5D": backward-word
-"\e\e[C": forward-word
-"\e\e[D": backward-word
 # Home
 "\e[1~": beginning-of-line
 # End
