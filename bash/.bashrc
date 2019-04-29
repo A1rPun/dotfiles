@@ -1,8 +1,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 # Alias
-if [ -f "$HOME/.aliases" ]; then
-  . "$HOME/.aliases"
+if [ -f "$HOME/.bash_aliases" ]; then
+  . "$HOME/.bash_aliases"
 fi
 if [ -f "$HOME/.alias_arch" ]; then
   . "$HOME/.alias_arch"
@@ -10,79 +10,6 @@ fi
 if [ -f "$HOME/.alias_termux" ]; then
   . "$HOME/.alias_termux"
 fi
-## For pipes |
-RAINBOW="toilet -f term --gay"
-## Open this file
-alias nb="nano ~/.bashrc"
-## Application Colors!
-alias ls="ls --color=auto"
-alias diff="diff --color=auto"
-alias grep='grep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-man() {
-    LESS_TERMCAP_md=$'\e[01;31m' \
-    LESS_TERMCAP_me=$'\e[0m' \
-    LESS_TERMCAP_se=$'\e[0m' \
-    LESS_TERMCAP_so=$'\e[01;44;33m' \
-    LESS_TERMCAP_ue=$'\e[0m' \
-    LESS_TERMCAP_us=$'\e[01;32m' \
-    command man "$@"
-}
-export GREP_COLOR="49;32"
-## General
-alias ll="ls -lF"
-alias la="ls -lAF"
-alias last="history 10"
-alias rimraf="rm -rf"
-alias whereami="pwd -P"
-alias dua="du -hsc *"
-alias cal="cal -m -w --color"
-# Queries
-alias qp="ps faux | grep"
-alias qw="xdotool search . behave %@ focus getwindowname"
-alias qt="grep -C 2 -R"
-alias qf="find . | grep"
-## Languages
-alias py="python"
-alias pi="ipython"
-alias js="node"
-alias r="Rscript"
-alias ri="R --quiet"
-## Apps
-### Asciinema
-alias ac="asciinema rec -w 2.5 -c '$PREFIX/bin/bash -l' demo.json"
-### Git
-alias gai="git add -p"
-alias gri="git reset -p"
-alias gci="git checkout -p"
-alias gs="git status"
-alias gc="git commit -m"
-alias gca="git commit --amend --no-edit"
-alias ff="git diff"
-alias gg="git pull"
-alias gp="git push"
-alias gco="git checkout"
-alias gor="git remote show origin"
-alias gl="git log --pretty=format:\"%h %s\" --graph"
-alias gb="git checkout -b"
-alias yolo="git add ."
-alias up="git for-each-ref --format='%(refname:short) -> %(upstream:short)' refs/heads"
-### GitDaily
-alias gd="gitdaily --all"
-alias gdc="gd --compact"
-### Htop
-alias ht="htop --sort-key=PERCENT_MEM"
-### Mpv
-alias shf="mpv -vo null --shuffle --loop-playlist --msg-level=ao=fatal"
-# NPM
-alias npmupdate="npm install -g npm"
-alias npminstalled="npm list -g --depth=0"
-alias blackhole="npm install"
-### Speedometer
-alias wt="speedometer -l -r wlp3s0 -t wlp3s0 -m $(( 1024 * 1024 * 3 / 2 )) -b"
-alias nt="speedometer -l -r enp2s0 -t enp2s0 -m $(( 1024 * 1024 * 3 / 2 )) -b"
-
 # Functions
 ## Extract archive
 extract () {
@@ -137,7 +64,7 @@ colors() {
 # View markdown in terminal
 md() {
   fileName=${1:-"README.md"}
-  mdp "$fileName"
+  markdown-cli "$fileName"
 }
 # count files & folders
 count() {
@@ -146,7 +73,6 @@ count() {
   local countf=`ls -l | grep ^- -c`
   echo -e "Total:\t$count\nDir:\t$countd\nFile:\t$countf"
 }
-
 # Set up git variables for PS1
 find_git_branch() {
   local branch
@@ -175,8 +101,9 @@ find_git_upstream_count() {
     git_up_count=""
   fi
 }
-PROMPT_COMMAND="$PROMPT_COMMAND; find_git_branch; find_git_dirty; find_git_upstream_count"
-
+PROMPT_COMMAND="$PROMPT_COMMAND find_git_branch; find_git_dirty; find_git_upstream_count;"
+## For pipes |
+RAINBOW="toilet -f term --gay"
 # Terminal styles
 ## Colors
 DARKGREEN="\[\e[38;5;28m\]"
@@ -200,8 +127,11 @@ export PS3="$SIMPLE"
 export PS4="$SIMPLE"
 
 # Other options
-export HISTCONTROL=erasedups:ignorespace
+export HISTCONTROL=ignoreboth:erasedups
 export HISTSIZE=1000
+export HISTFILESIZE=2000
+# Sync history across terminals
+PROMPT_COMMAND="$PROMPT_COMMAND history -a; history -c; history -r;"
 shopt -s histappend
 shopt -s checkwinsize
 shopt -s autocd
