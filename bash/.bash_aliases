@@ -4,7 +4,7 @@ alias nb="vim ~/.bashrc"
 alias diff="diff --color=auto"
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
-alias grep='grep --color=auto'
+alias grep='grep --color=auto --exclude-dir=.git'
 alias ls="ls --color=auto"
 ## General
 alias cal="cal -m -w --color"

@@ -33,18 +33,10 @@ call plug#begin('~/.vim/plugged')
 
 " Plugins from github repos:
 
-" Override configs by directory 
-Plug 'arielrossanigo/dir-configs-override.vim'
 " Better file browser
 Plug 'scrooloose/nerdtree'
 " Code commenter
 Plug 'scrooloose/nerdcommenter'
-" Class/module browser
-Plug 'majutsushi/tagbar'
-" Code and files fuzzy finder
-Plug 'ctrlpvim/ctrlp.vim'
-" Extension to ctrlp, for fuzzy command finder
-Plug 'fisadev/vim-ctrlp-cmdpalette'
 " Zen coding
 Plug 'mattn/emmet-vim'
 " Git integration
@@ -79,10 +71,6 @@ Plug 'honza/vim-snippets'
 Plug 'garbas/vim-snipmate'
 " Git/mercurial/others diff icons on the side of the file lines
 Plug 'mhinz/vim-signify'
-" Automatically sort python imports
-"Plug 'fisadev/vim-isort'"
-" Drag visual blocks arround
-Plug 'fisadev/dragvisuals.vim'
 " Window chooser
 Plug 't9md/vim-choosewin'
 " Python and other languages code checker
@@ -240,13 +228,6 @@ endif
 " ============================================================================
 " Plugins settings and mappings
 " Edit them as you wish.
-
-" Tagbar ----------------------------- 
-
-" toggle tagbar display
-map <F4> :TagbarToggle<CR>
-" autofocus on tagbar open
-let g:tagbar_autofocus = 1
 
 " NERDTree ----------------------------- 
 
