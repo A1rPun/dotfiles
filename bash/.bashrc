@@ -64,7 +64,7 @@ colors() {
 # View markdown in terminal
 md() {
   fileName=${1:-"README.md"}
-  markdown-cli "$fileName"
+  markdown "$fileName"
 }
 # count files & folders
 count() {
