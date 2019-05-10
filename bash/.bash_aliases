@@ -51,7 +51,8 @@ alias up="git for-each-ref --format='%(refname:short) -> %(upstream:short)' refs
 alias yolo="git add ."
 ### GitDaily
 alias gd="gitdaily --all"
-alias gdc="gd --compact"
+alias gdc="gitdaily --compact"
+alias gda="gd --parent"
 ### Htop
 alias ht="htop --sort-key=PERCENT_MEM"
 ### Mpv
