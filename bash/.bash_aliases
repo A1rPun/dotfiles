@@ -15,6 +15,7 @@ alias ll="ls -lF"
 alias rimraf="rm -rf"
 alias v="vim"
 alias whereami="pwd -P"
+alias listalias="alias | bat -l=bash --paging=never"
 # Queries
 alias qf="find . | grep"
 alias qp="ps faux | grep"
@@ -60,7 +61,8 @@ alias shf="mpv -vo null --shuffle --loop-playlist --msg-level=ao=fatal"
 # NPM
 alias npmupdate="npm install -g npm"
 alias npminstalled="npm list -g --depth=0"
-alias blackhole="npm install"
+alias blackhole="npm i"
+alias obliterate="rimraf node_modules/"
 ### Speedometer
 alias wt="speedometer -l -r wlp3s0 -t wlp3s0 -m $(( 1024 * 1024 * 3 / 2 )) -b"
 alias nt="speedometer -l -r enp2s0 -t enp2s0 -m $(( 1024 * 1024 * 3 / 2 )) -b"
