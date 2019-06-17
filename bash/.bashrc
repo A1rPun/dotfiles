@@ -12,7 +12,7 @@ if [ -f "$HOME/.alias_termux" ]; then
 fi
 # Functions
 ## Extract archive
-extract () {
+extract() {
   if [ -f $1 ] ; then
     case $1 in
       *.tar.bz2)   tar xvjf $1    ;;
@@ -33,7 +33,7 @@ extract () {
   fi
 }
 ## Scan network. Usage > "ipscan 192.168.1"
-ipscan(){
+ipscan() {
   local ipaddress=""
   if [ -e $1 ] ; then
     ipaddress=`ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}' | cut -f1  -d'/'`
@@ -48,6 +48,9 @@ ipscan(){
   else
     nmap -sn --system-dns $ipaddress
   fi
+}
+hostname() {
+  sudo nmap -O $1 2>&1
 }
 github() {
   local split=(${1//\// })
