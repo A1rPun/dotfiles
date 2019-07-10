@@ -16,6 +16,8 @@ alias rimraf="rm -rf"
 alias v="vim"
 alias whereami="pwd -P"
 alias listalias="alias | bat -l=bash --paging=never"
+alias nslookup="drill"
+alias dig="drill"
 # Queries
 alias qf="find . | grep"
 alias qp="ps faux | grep"
