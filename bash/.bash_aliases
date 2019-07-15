@@ -61,8 +61,8 @@ alias ht="htop --sort-key=PERCENT_MEM"
 ### Mpv
 alias shf="mpv -vo null --shuffle --loop-playlist --msg-level=ao=fatal"
 # NPM
-alias npmupdate="npm install -g npm"
 alias npminstalled="npm list -g --depth=0"
+alias npmoutdated="npm outdated -g --depth=0"
 alias blackhole="npm i"
 alias obliterate="rimraf node_modules/"
 ### Speedometer

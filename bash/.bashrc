@@ -129,6 +129,8 @@ export PS4="$SIMPLE"
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 export GREP_COLOR="49;32"
 # Other options
+export VISUAL=vim
+export EDITOR="$VISUAL"
 export HISTCONTROL=ignoreboth:erasedups
 export HISTSIZE=1000
 export HISTFILESIZE=2000
