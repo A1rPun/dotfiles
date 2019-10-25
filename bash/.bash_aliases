@@ -4,7 +4,7 @@ alias nb="vim ~/.bashrc"
 alias diff="diff --color=auto"
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
-alias grep='grep --color=auto --exclude-dir=.git'
+alias grep='grep --color=auto --exclude-dir={.git,node_modules,dist}'
 alias ls="ls --color=auto"
 ## General
 alias cal="cal -m -w --color"
@@ -52,6 +52,7 @@ alias grs="git remote set-url origin"
 alias gs="git status"
 alias up="git for-each-ref --format='%(refname:short) -> %(upstream:short)' refs/heads"
 alias yolo="git add ."
+alias master="git checkout master"
 ### GitDaily
 alias gd="gitdaily --all"
 alias gdc="gitdaily --compact"

@@ -149,3 +149,7 @@ man() {
     LESS_TERMCAP_us=$'\e[38;5;10m' \
     command man "$@"
 }
+export http_proxy=''
+export https_proxy=''
+export ftp_proxy=''
+export socks_proxy=''
