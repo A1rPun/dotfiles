@@ -31,7 +31,7 @@ My personal collection of dotfiles. Free to copy or distribute.
 - asciinema
 - feh (Image viewer, Background setter)
 - ponymix
-- xscreensaver
+- xscreensaver (for awesome visuals)
 
 ## Useful tricks
 - In `htop` use F2 to customize

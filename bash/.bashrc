@@ -76,6 +76,10 @@ count() {
   local countf=`ls -l | grep ^- -c`
   echo -e "Total:\t$count\nDir:\t$countd\nFile:\t$countf"
 }
+# Check if a file has a Byte Order Mark
+hasbom() {
+  head -c3 "$1" | LC_ALL=C grep -qP '\xef\xbb\xbf'
+}
 # Set up git variables for PS1
 find_git_branch() {
   local branch
