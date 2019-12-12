@@ -28,7 +28,7 @@ alias qw="xdotool search . behave %@ focus getwindowname"
 alias js="node"
 alias paccept='php bin/console --env=accept'
 alias pdev='php bin/console --env=dev'
-alias phpfix='php-cs-fixer fix && ./vendor/bin/phpstan analyse --level=7 -n src'
+alias phpfix='php-cs-fixer fix && phpstan analyse'
 alias pi="ipython"
 alias pprod='php bin/console --env=prod'
 alias py="python"
