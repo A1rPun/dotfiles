@@ -108,7 +108,7 @@ find_git_upstream_count() {
     git_up_count=""
   fi
 }
-PROMPT_COMMAND="$PROMPT_COMMAND find_git_branch; find_git_dirty; find_git_upstream_count;"
+PROMPT_COMMAND="$PROMPT_COMMAND; find_git_branch; find_git_dirty; find_git_upstream_count;"
 # Terminal styles
 ## Colors
 DARKGREEN="\[\e[38;5;28m\]"
