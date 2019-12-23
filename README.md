@@ -29,7 +29,14 @@ My personal collection of dotfiles. Free to copy or distribute.
 ## Notable installed apps
 
 - asciinema
+- bat (Improved cat(1))
+- dfc (Improved df(1), pretty disk space usage)
 - feh (Image viewer, Background setter)
+- fx (JSON in terminal viewer)
+- gitmoji-cli
+- neofetch
+- nmap
+- pastel (color chooser in terminal)
 - ponymix
 - xscreensaver (for awesome visuals)
 

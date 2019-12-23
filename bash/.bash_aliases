@@ -2,41 +2,49 @@
 alias nb="vim ~/.bashrc"
 ## Application Colors!
 alias diff="diff --color=auto"
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
-alias grep='grep --color=auto --exclude-dir={.git,node_modules,dist}'
-alias ls="ls --color=auto"
+alias egrep="egrep --color=auto"
+alias fgrep="fgrep --color=auto"
+alias grep="grep --color=auto --exclude-dir={.git,node_modules,dist}"
+if [ -x "$(command -v exa)" ]; then
+  alias ls="exa"
+else
+  alias ls="ls --color=auto"
+fi
 ## General
+#alias -="cd -"
 alias cal="cal -m -w --color"
+alias dig="drill"
 alias dua="du -hsc *"
 alias la="ls -lAF"
 alias last="history 10"
+alias listalias="alias | bat -l=bash --paging=never"
 alias ll="ls -lF"
+alias mime="file -bi"
+alias nslookup="drill"
 alias rimraf="rm -rf"
 alias v="vim"
 alias whereami="pwd -P"
-alias listalias="alias | bat -l=bash --paging=never"
-alias nslookup="drill"
-alias dig="drill"
-alias mime="file -bi"
 # Queries
 alias qf="find . | grep"
 alias qp="ps faux | grep"
 alias qt="grep -C 2 -R"
 alias qw="xdotool search . behave %@ focus getwindowname"
+alias qs="du -sh"
 ## Languages
 alias js="node"
-alias paccept='php bin/console --env=accept'
-alias pdev='php bin/console --env=dev'
-alias phpfix='php-cs-fixer fix && phpstan analyse'
+alias paccept="php bin/console --env=accept"
+alias pdev="php bin/console --env=dev"
+alias phpfix="php-cs-fixer fix && phpstan analyse"
 alias pi="ipython"
-alias pprod='php bin/console --env=prod'
+alias pprod="php bin/console --env=prod"
 alias py="python"
 alias r="Rscript"
 alias ri="R --quiet"
 ## Apps
 ### Asciinema
 alias ac="asciinema rec -w 2.5 -c '$PREFIX/bin/bash -l' demo.json"
+### Fx
+alias json="fx package.json"
 ### Git
 alias ff="git diff"
 alias gai="git add -p"
@@ -52,21 +60,23 @@ alias gp="git push"
 alias gri="git reset -p"
 alias grs="git remote set-url origin"
 alias gs="git status"
+alias master="git checkout master"
 alias up="git for-each-ref --format='%(refname:short) -> %(upstream:short)' refs/heads"
 alias yolo="git add ."
-alias master="git checkout master"
 ### GitDaily
 alias gd="gitdaily --all"
-alias gdc="gitdaily --compact"
 alias gda="gd --parent"
+alias gdc="gitdaily --compact"
 ### Htop
 alias ht="htop --sort-key=PERCENT_MEM"
 ### Mpv
 alias shf="mpv -vo null --shuffle --loop-playlist --msg-level=ao=fatal"
-# NPM
+### SSH
+alias sshagent="eval `ssh-agent` && ssh-add ~/.ssh/id_rsa"
+### NPM
+alias blackhole="npm i"
 alias npminstalled="npm list -g --depth=0"
 alias npmoutdated="npm outdated -g --depth=0"
-alias blackhole="npm i"
 alias obliterate="rimraf node_modules/"
 ### Speedometer
 alias wt="speedometer -l -r wlp3s0 -t wlp3s0 -m $(( 1024 * 1024 * 3 / 2 )) -b"
