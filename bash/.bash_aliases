@@ -28,7 +28,7 @@ alias whereami="pwd -P"
 alias qf="find . | grep"
 alias qp="ps faux | grep"
 alias qt="grep -C 2 -R"
-alias qw="xdotool search . behave %@ focus getwindowname"
+alias qw="xprop | grep WM_CLASS"
 alias qs="du -sh"
 ## Languages
 alias js="node"
