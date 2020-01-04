@@ -10,10 +10,10 @@ background = #000
 background-alt = #333
 foreground = #dfdfdf
 foreground-alt = #555
-primary = #00ff00
-secondary = #33ff33
-alert = #ff0000
+primary = #228b22
+secondary = #228b22 
 
+alert = #ff0000
 [settings]
 screenchange-reload = true
 
@@ -48,8 +48,8 @@ module-margin-right = 1
 font-0 = RobotoMono-Regular:pixelsize=10;2
 font-1 = FontAwesome5Free:style=Solid:pixelsize=10:antialias=false;2
 
-modules-left = bspwm xwindow
-modules-center =
+modules-left = bspwm
+modules-center = xwindow
 modules-right = wlan eth cpu memory temperature battery date powermenu
 
 tray-position = right
@@ -210,20 +210,29 @@ expand-right = true
 format-spacing = 1
 
 label-font = 2
-label-open = ""
+label-open = ""
 label-open-padding = 1
-label-open-foreground = ${colors.foreground-alt}
+label-open-foreground = ${colors.primary}
 label-close = ""
-label-close-foreground = ${colors.foreground-alt}
+label-close-foreground = #ff5a5a
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}
 
 menu-0-0 = ""
 menu-0-0-exec = reboot
-menu-0-1 = ""
-menu-0-1-exec = systemctl suspend
-menu-0-2 = ""
-menu-0-2-exec = poweroff
+menu-0-0-foreground = #ff7b5a
+menu-0-1 = ""
+menu-0-1-exec = poweroff
+menu-0-1-foreground = #ffb65a
+menu-0-2 = ""
+menu-0-2-exec = systemctl suspend
+menu-0-2-foreground = #ced07d
+menu-0-3 = ""
+menu-0-3-exec = rofi -show run
+menu-0-3-foreground = #7dd0b6
+menu-0-4 = ""
+menu-0-4-exec = xfce4-terminal
+menu-0-4-foreground = #75507b
 
 [module/pkg]
 type = custom/script

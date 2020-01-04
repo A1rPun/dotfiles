@@ -15,7 +15,7 @@ framerate = 30
 # or remain commented out. 1 = on, 0 = off. Warning: for certain terminal emulators cava will
 # not able to restore color definitions on exit, simply restart your terminal to restore colors.
 gradient = 1
-gradient_color_1 = '#00ff00'
+gradient_color_1 = '#228b22'
 gradient_color_2 = '#ffffff'
 
 [smoothing]

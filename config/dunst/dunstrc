@@ -60,8 +60,8 @@
 
 [urgency_normal]
     background = "#000000"
-    foreground = "#00ff00"
-    frame_color = "#00ff00"
+    foreground = "#228b22"
+    frame_color = "#228b22"
     timeout = 10
 
 [urgency_critical]
@@ -75,6 +75,6 @@
     format  = "%s %n%%"
     urgency = low
     background = "#000000"
-    foreground = "#ffffff"
-    frame_color = "#ffffff"
+    foreground = "#228b22"
+    frame_color = "#228b22"
     timeout = 3
