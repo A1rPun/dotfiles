@@ -41,6 +41,6 @@ compton -b &
 parcellite -n &
 polybar a1r &
 sxhkd &
-udiskie -2 -s &
+udiskie -s &
 xbindkeys &
 xfce4-terminal & ## Foreground
