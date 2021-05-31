@@ -1,4 +1,7 @@
 syntax on
+filetype plugin on
+
+:set nocompatible
 
 :colo slate
 :highlight ColorColumn term=reverse cterm=NONE ctermfg=NONE ctermbg=4 gui=NONE guifg=NONE guibg=Black
@@ -8,6 +11,7 @@ syntax on
 :set scrolloff=8
 :set nowrap
 :set colorcolumn=80,100
+:set wildmenu
 
 :set relativenumber
 :set nu
