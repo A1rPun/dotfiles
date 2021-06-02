@@ -94,7 +94,7 @@ alias ht="htop --sort-key=PERCENT_MEM"
 ### Mpv
 alias shf="mpv -vo null --shuffle --loop-playlist --msg-level=ao=fatal"
 ### SSH
-alias sshagent="eval `ssh-agent` && ssh-add ~/.ssh/id_rsa"
+#alias sshagent="eval `ssh-agent` && ssh-add ~/.ssh/id_rsa"
 ### NPM
 alias blackhole="npm i"
 alias npminstalled="npm list -g --depth=0"

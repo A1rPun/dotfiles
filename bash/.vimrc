@@ -1,9 +1,9 @@
-syntax on
-filetype plugin on
+:syntax on
+:filetype plugin on
 
 :set nocompatible
 
-:colo slate
+:colo murphy
 :highlight ColorColumn term=reverse cterm=NONE ctermfg=NONE ctermbg=4 gui=NONE guifg=NONE guibg=Black
 
 :set noerrorbells
@@ -29,3 +29,5 @@ filetype plugin on
 :set nobackup
 :set undodir=~/.vim/undodir
 :set undofile
+
+:autocmd FileType javascript setlocal shiftwidth=2 tabstop=4 softtabstop=4

@@ -9,3 +9,4 @@ noop() {
   :
 }
 PROMPT_COMMAND=noop
+export PATH=$PATH:$HOME/bin
