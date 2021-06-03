@@ -13,6 +13,7 @@ alias archinstalled="yay -Qt"
 alias yorphanlist="yay -Qdt | awk '{print \$1}' | xargs yay -Qi | awk -F ':' '/Name/{printf \$2} /Installed Size/{print \$2;}'"
 alias yorphanclean="xargs -ra <(yay -Qdt | awk '{print \$1}') yay -Rcs"
 alias updategrub="grub-mkconfig -o /boot/grub/grub.cfg"
+alias testmic="arecord -vvv -f dat /dev/null"
 
 # Copyright (c) 2017 - Paradoxis
 # Modified (c) 2019 - A1rPun

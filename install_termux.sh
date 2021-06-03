@@ -14,5 +14,5 @@ linkFile "./termux/termux.colors" ".termux/termux.colors"
 echoo "Link termux alias"
 linkFile "./bash/.alias_termux"
 # setup bin
-echoo "create $HOME/bin dir"
+echoo "Create $HOME/bin dir"
 mkdir $HOME/bin

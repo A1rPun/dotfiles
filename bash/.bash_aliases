@@ -31,13 +31,11 @@ alias qt="grep -C 2 -R"
 alias qw="xprop | grep WM_CLASS"
 alias qs="du -sh"
 ## Languages
-alias js="node"
 alias paccept="php bin/console --env=accept"
 alias pdev="php bin/console --env=dev"
 alias phpfix="php-cs-fixer fix && phpstan analyse"
 alias pi="ipython"
 alias pprod="php bin/console --env=prod"
-alias py="python"
 pyvenv() {
   local folder=""
   if [ -e $1 ] ; then
