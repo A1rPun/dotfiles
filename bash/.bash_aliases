@@ -15,10 +15,9 @@ fi
 alias cal="cal -m -w --color"
 alias dig="drill"
 alias dua="du -hsc *"
-alias la="ls -lAF"
+alias la="ls -lF"
 alias last="history 10"
 alias listalias="alias | bat -l=bash --paging=never"
-alias ll="ls -lF"
 alias mime="file -bi"
 alias nslookup="drill"
 alias rimraf="rm -rf"
@@ -36,28 +35,6 @@ alias pdev="php bin/console --env=dev"
 alias phpfix="php-cs-fixer fix && phpstan analyse"
 alias pi="ipython"
 alias pprod="php bin/console --env=prod"
-pyvenv() {
-  local folder=""
-  if [ -e $1 ] ; then
-    folder="venv"
-  else
-    folder="$1"
-  fi
-
-  python3 -m venv $folder
-  source "$folder/bin/activate"
-}
-pydie() {
-  # Find folder?
-  local folder=""
-  if [ -e $1 ] ; then
-    folder="venv"
-  else
-    folder="$1"
-  fi
-  deactivate
-  rm -rf $folder
-}
 alias r="Rscript"
 alias ri="R --quiet"
 ## Apps

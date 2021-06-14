@@ -80,6 +80,33 @@ count() {
 hasbom() {
   head -c3 "$1" | LC_ALL=C grep -qP '\xef\xbb\xbf'
 }
+# Python environment
+pyvenv() {
+  local folder=""
+  if [ -e $1 ] ; then
+    folder="venv"
+  else
+    folder="$1"
+  fi
+
+  python3 -m venv $folder
+  source "$folder/bin/activate"
+}
+pydie() {
+  # Find folder?
+  local folder=""
+  if [ -e $1 ] ; then
+    folder="venv"
+  else
+    folder="$1"
+  fi
+  deactivate
+  rm -rf $folder
+}
+git_cheat_date() {
+  host=${1:-"origin/main"}
+  git rebase $host --exec "git commit --amend --reset-author --no-edit"
+}
 # Set up git variables for PS1
 find_git_branch() {
   local branch
