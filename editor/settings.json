@@ -1,0 +1,19 @@
+{
+  "telemetry.enableTelemetry": false,
+  "telemetry.enableCrashReporter": false,
+  "bracket-pair-colorizer-2.colors": ["#00ff00", "#a7cf5c", "#32964e", "#c6cc2e"],
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "editor.renderControlCharacters": true,
+  "editor.renderWhitespace": "all",
+  "editor.tabSize": 2,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "extensions.autoUpdate": false,
+  "git.confirmSync": false,
+  "gitlens.codeLens.authors.enabled": false,
+  "gitlens.codeLens.recentChange.enabled": false,
+  "gitlens.currentLine.enabled": false,
+  "gitlens.currentLine.scrollable": false,
+  "workbench.iconTheme": "vscode-icons"
+}
