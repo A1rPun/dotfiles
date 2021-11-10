@@ -15,13 +15,15 @@ fi
 alias cal="cal -m -w --color"
 alias dig="drill"
 alias dua="du -hsc *"
+alias diskusage="dfc"
 alias la="ls -lF"
 alias last="history 10"
 alias listalias="alias | bat -l=bash --paging=never"
 alias mime="file -bi"
 alias nslookup="drill"
 alias rimraf="rm -rf"
-alias v="vim"
+alias vi="vim"
+alias vv="vim"
 alias whereami="pwd -P"
 # Queries
 alias qf="find . | grep"
@@ -40,6 +42,9 @@ alias ri="R --quiet"
 ## Apps
 ### Asciinema
 alias ac="asciinema rec -w 2.5 -c '$PREFIX/bin/bash -l' demo.json"
+# Entr
+alias watch_with="ls * | entr"
+alias ww="watch_with"
 ### Fx
 alias json="fx package.json"
 ### Git
