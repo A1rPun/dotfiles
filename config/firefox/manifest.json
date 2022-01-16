@@ -1,0 +1,55 @@
+{
+  "name": "Lean Green",
+  "author": "A1rPun",
+  "manifest_version": 2,
+  "version": "1.0",
+  "theme": {
+    "colors": {
+      "frame": "rgba(29, 32, 33, 1)",
+      "frame_inactive": "rgba(34, 37, 38, 1)",
+      "tab_background_text": "rgba(233, 233, 233, 1)",
+      "tab_background_separator": "rgba(78, 85, 89, 1)",
+
+      "tab_text": "rgba(233, 233, 233, 1)",
+      "tab_line": "#228b22",
+      "tab_loading": "#228b22",
+      "tab_selected": "rgba(24, 26, 27, 1)",
+      "icons": "rgba(233, 233, 233, 1)",
+      "icons_attention": "#228b22",
+
+      "toolbar": "rgba(24, 26, 27, 1)",
+      "bookmark_text": "rgba(233, 233, 233, 1)",
+      "toolbar_top_separator": "rgba(24, 26, 27, 1)",
+      "toolbar_bottom_separator": "rgba(29, 32, 33, 1)",
+      "toolbar_vertical_separator": "rgba(24, 26, 27, 1)",
+
+      "toolbar_field": "rgba(29, 32, 33, 1)",
+      "toolbar_field_text": "rgba(233, 233, 233, 1)",
+      "toolbar_field_text_focus": "rgba(255, 255, 255, 1)",
+      "toolbar_field_highlight": "#228b22",
+      "toolbar_field_highlight_text": "rgba(255, 255, 255, 1)",
+      "toolbar_field_focus": "rgba(39, 42, 43, 1)",
+      "toolbar_field_border": "rgba(29, 32, 33, 1)",
+      "toolbar_field_separator": "rgba(29, 32, 33, 1)",
+      "toolbar_field_border_focus": "#228b22",
+
+      "button_background_hover": "rgba(52, 56, 59, 1)",
+      "button_background_active": "rgba(78, 85, 89, 1)",
+
+      "popup": "rgba(29, 32, 33, 1)",
+      "popup_text": "rgba(233, 233, 233, 1)",
+      "popup_border": "#228b22",
+      "popup_highlight": "#228b22",
+      "popup_highlight_text": "rgba(255, 255, 255, 1)",
+
+      "ntp_background": "rgba(24, 26, 27, 1)",
+      "ntp_text": "rgba(233, 233, 233, 1)",
+
+      "sidebar": "rgba(29, 32, 33, 1)",
+      "sidebar_border": "#228b22",
+      "sidebar_text": "rgba(233, 233, 233, 1)",
+      "sidebar_highlight": "#228b22",
+      "sidebar_highlight_text": "rgba(255, 255, 255, 1)"
+    }
+  }
+}
