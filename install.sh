@@ -4,6 +4,9 @@
 # bash_aliases
 echoo "Link .bash_aliases"
 linkFile "./bash/.bash_aliases"
+# bash_functions
+echoo "Link .bash_functions"
+linkFile "./bash/.bash_functions"
 # bashrc
 echoo "Link .bashrc"
 linkFile "./bash/.bashrc"
@@ -13,6 +16,3 @@ linkFile "./bash/.inputrc"
 # vimrc
 echoo "Link .vimrc"
 linkFile "./bash/.vimrc"
-# alias_arch
-echoo "Link .alias_arch"
-linkFile "./bash/.alias_arch"

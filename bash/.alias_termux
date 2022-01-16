@@ -1,4 +1,3 @@
-# Termux
 alias tmuxi="pkg install"
 alias tmuxr="pkg uninstall"
 alias tmuxs="pkg search"

@@ -1,4 +1,3 @@
-# Arch
 alias s="sudo"
 alias pls='sudo $(fc -ln -1)'
 alias yy="yay"
@@ -14,3 +13,4 @@ alias yorphanlist="yay -Qdt | awk '{print \$1}' | xargs yay -Qi | awk -F ':' '/N
 alias yorphanclean="xargs -ra <(yay -Qdt | awk '{print \$1}') yay -Rcs"
 alias updategrub="grub-mkconfig -o /boot/grub/grub.cfg"
 alias testmic="arecord -vvv -f dat /dev/null"
+alias testscreen="xrandr -q"

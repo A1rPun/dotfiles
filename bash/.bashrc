@@ -4,138 +4,16 @@
 if [ -f "$HOME/.bash_aliases" ]; then
   . "$HOME/.bash_aliases"
 fi
+if [ -f "$HOME/.bash_functions" ]; then
+  . "$HOME/.bash_functions"
+fi
 if [ -f "$HOME/.alias_arch" ]; then
   . "$HOME/.alias_arch"
 fi
 if [ -f "$HOME/.alias_termux" ]; then
   . "$HOME/.alias_termux"
 fi
-# Functions
-## Extract archive
-extract() {
-  if [ -f $1 ] ; then
-    case $1 in
-      *.tar.bz2)   tar xvjf $1    ;;
-      *.tar.gz)    tar xvzf $1    ;;
-      *.bz2)       bunzip2 $1     ;;
-      *.rar)       unrar x $1     ;;
-      *.gz)        gunzip $1      ;;
-      *.tar)       tar xvf $1     ;;
-      *.tbz2)      tar xvjf $1    ;;
-      *.tgz)       tar xvzf $1    ;;
-      *.zip)       unzip $1       ;;
-      *.Z)         uncompress $1  ;;
-      *.7z)        7z x $1        ;;
-      *)           echo "don't know how to extract > '$1'" ;;
-    esac
-  else
-    echo "'$1' is not a valid file!"
-  fi
-}
-## Scan network. Usage > "ipscan 192.168.1"
-ipscan() {
-  local ipaddress=""
-  if [ -e $1 ] ; then
-    ipaddress=`ip addr | grep 'state UP' -A2 | tail -n1 | awk '{print $2}' | cut -f1  -d'/'`
-    echo "Current IP = $ipaddress"
-    ipaddress="${ipaddress%.*}.*"
-  else
-    ipaddress="$1.*"
-  fi
-  echo "IP range = $ipaddress"
-  if hash sudo 2>/dev/null; then
-    sudo nmap -sn --system-dns $ipaddress
-  else
-    nmap -sn --system-dns $ipaddress
-  fi
-}
-hostname() {
-  sudo nmap -O $1 2>&1
-}
-github() {
-  local split=(${1//\// })
-  local slength=${#split[@]}
-  local repo="${split[slength - 1]}"
-  local user="${split[slength - 2]}"
-  git clone "https://github.com/$user/$repo"
-  cd "$repo"
-}
-# Print all colors
-colors() {
-  (x=`tput op` y=`printf %76s`;for i in {0..256};do o=00$i;echo -e ${o:${#o}-3:3} `tput setaf $i;tput setab $i`${y// /=}$x;done)
-}
-# View markdown in terminal
-md() {
-  fileName=${1:-"README.md"}
-  markdown "$fileName"
-}
-# count files & folders
-count() {
-  local count=`ls | wc -l`
-  local countd=`ls -l | grep ^d -c`
-  local countf=`ls -l | grep ^- -c`
-  echo -e "Total:\t$count\nDir:\t$countd\nFile:\t$countf"
-}
-# Check if a file has a Byte Order Mark
-hasbom() {
-  head -c3 "$1" | LC_ALL=C grep -qP '\xef\xbb\xbf'
-}
-# Python environment
-pyvenv() {
-  local folder=""
-  if [ -e $1 ] ; then
-    folder="venv"
-  else
-    folder="$1"
-  fi
 
-  python3 -m venv $folder
-  source "$folder/bin/activate"
-}
-pydie() {
-  # Find folder?
-  local folder=""
-  if [ -e $1 ] ; then
-    folder="venv"
-  else
-    folder="$1"
-  fi
-  deactivate
-  rm -rf $folder
-}
-git_cheat_date() {
-  host=${1:-"origin/main"}
-  git rebase $host --exec "git commit --amend --reset-author --no-edit"
-}
-# Set up git variables for PS1
-find_git_branch() {
-  local branch
-  if branch=$(git rev-parse --abbrev-ref HEAD 2> /dev/null); then
-    if [[ "$branch" == "HEAD" ]]; then
-      branch='detached*'
-    fi
-    git_branch="[$branch]"
-  else
-    git_branch=""
-  fi
-}
-find_git_dirty() {
-  local status=$(git status --porcelain 2> /dev/null)
-  if [[ "$status" != "" ]]; then
-    git_dirty="*"
-  else
-    git_dirty=""
-  fi
-}
-find_git_upstream_count() {
-  local count=$(git rev-list @{u}... --count 2> /dev/null)
-  if [[ $count != 0 && "$count" != "" ]]; then
-    git_up_count=">$count"
-  else
-    git_up_count=""
-  fi
-}
-PROMPT_COMMAND="$PROMPT_COMMAND; find_git_branch; find_git_dirty; find_git_upstream_count;"
 # Terminal styles
 ## Colors
 DARKGREEN="\[\e[38;5;28m\]"
@@ -150,7 +28,7 @@ NORMAL="\[\e[0m\]"
 ## Themes
 HAXXOR="$RED┌─[$DARKGREEN\u$RED]─[$GREEN\H$RED]─[$DARKGREEN\w$RED]\n$RED└─\$$GREEN"
 SIMPLE="$GREEN> $NORMAL"
-R41NB0W="$RED┌─[$ORANGE\h$YELLOW][$GREEN\u$CYAN][$BLUE\w$MAGENTA]\$git_branch\$git_up_count\$git_dirty\n$RED└»$NORMAL "
+R41NB0W="$RED┌─[$ORANGE\h$YELLOW][$GREEN\u$CYAN][$BLUE\w$MAGENTA]\$find_git\n$RED└»$NORMAL "
 ## Export prompt screens
 export PS1="$R41NB0W"
 export SUDO_PS1="$R41NB0W"
@@ -172,7 +50,7 @@ shopt -s checkwinsize
 shopt -s autocd
 # man colorize
 man() {
-    LESS_TERMCAP_md=$'\e[01;31m' \
+  LESS_TERMCAP_md=$'\e[01;31m' \
     LESS_TERMCAP_me=$'\e[0m' \
     LESS_TERMCAP_se=$'\e[0m' \
     LESS_TERMCAP_so=$'\e[38;5;5m' \
