@@ -28,23 +28,22 @@ NORMAL="\[\e[0m\]"
 ## Themes
 HAXXOR="$RED┌─[$DARKGREEN\u$RED]─[$GREEN\H$RED]─[$DARKGREEN\w$RED]\n$RED└─\$$GREEN"
 SIMPLE="$GREEN> $NORMAL"
-R41NB0W="$RED┌─[$ORANGE\h$YELLOW][$GREEN\u$CYAN][$BLUE\w$MAGENTA]\$find_git\n$RED└»$NORMAL "
+R41NB0W="$RED┌─[$ORANGE\h$YELLOW][$GREEN\u$CYAN][$BLUE\w$MAGENTA]\$(find_git_branch)\n$RED└»$NORMAL "
+A1R2022="$GREEN\w $MAGENTA\$(find_git_branch) \n$GREENλ$NORMAL "
 ## Export prompt screens
-export PS1="$R41NB0W"
-export SUDO_PS1="$R41NB0W"
-export PS2="$SIMPLE"
-export PS3="$SIMPLE"
-export PS4="$SIMPLE"
+export PS1=$A1R2022
+export SUDO_PS1=$A1R2022
+export PS2=$SIMPLE
+export PS3=$SIMPLE
+export PS4=$SIMPLE
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 export GREP_COLOR="49;32"
 # Other options
 export VISUAL=emacs
-export EDITOR="$VISUAL"
+export EDITOR=$VISUAL
 export HISTCONTROL=ignoreboth:erasedups
 export HISTSIZE=1000
 export HISTFILESIZE=2000
-# Sync history across terminals
-PROMPT_COMMAND="$PROMPT_COMMAND history -a; history -c; history -r;"
 shopt -s histappend
 shopt -s checkwinsize
 shopt -s autocd

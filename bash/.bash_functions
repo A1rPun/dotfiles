@@ -82,18 +82,6 @@ hasbom() {
   head -c3 "$1" | LC_ALL=C grep -qP '\xef\xbb\xbf'
 }
 
-find_git_branch() {
-  local branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
-  if branch; then
-    if [[ "$branch" == "HEAD" ]]; then
-      branch='detached*'
-    fi
-    echo "[$branch]"
-  else
-    echo ""
-  fi
-}
-
 find_git_dirty() {
   local status=$(git status --porcelain 2>/dev/null)
   if [[ "$status" != "" ]]; then
@@ -106,12 +94,20 @@ find_git_dirty() {
 find_git_upstream_count() {
   local count=$(git rev-list @{u}... --count 2>/dev/null)
   if [[ $count != 0 && "$count" != "" ]]; then
-    echo ">$count"
+    echo $count
   else
     echo ""
   fi
 }
 
-find_git() {
-  echo "\$find_git_branch\$find_git_upstream_count\$find_git_dirty"
+find_git_branch() {
+  local branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
+  if [[ "$branch" != "" ]]; then
+    if [[ "$branch" == "HEAD" ]]; then
+      branch='detached*'
+    fi
+    echo "($branch)$(find_git_upstream_count)>$(find_git_dirty)"
+  else
+    echo ""
+  fi
 }
