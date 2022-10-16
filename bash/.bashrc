@@ -29,7 +29,7 @@ NORMAL="\[\e[0m\]"
 HAXXOR="$RED┌─[$DARKGREEN\u$RED]─[$GREEN\H$RED]─[$DARKGREEN\w$RED]\n$RED└─\$$GREEN"
 SIMPLE="$GREEN> $NORMAL"
 R41NB0W="$RED┌─[$ORANGE\h$YELLOW][$GREEN\u$CYAN][$BLUE\w$MAGENTA]\$(find_git_branch)\n$RED└»$NORMAL "
-A1R2022="$GREEN\w $MAGENTA\$(find_git_branch) \n$GREENλ$NORMAL "
+A1R2022="$GREEN┌─» \w $MAGENTA\$(find_git_branch) \n$GREEN└─»$NORMAL "
 ## Export prompt screens
 export PS1=$A1R2022
 export SUDO_PS1=$A1R2022
@@ -61,3 +61,4 @@ export http_proxy=''
 export https_proxy=''
 export ftp_proxy=''
 export socks_proxy=''
+source /usr/share/nvm/init-nvm.sh

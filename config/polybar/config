@@ -206,7 +206,7 @@ label-warn-foreground = ${colors.secondary}
 [module/powermenu]
 type = custom/menu
 
-expand-right = true
+expand-right = false
 format-spacing = 1
 
 label-font = 2
@@ -214,25 +214,25 @@ label-open = ""
 label-open-padding = 1
 label-open-foreground = ${colors.primary}
 label-close = ""
-label-close-foreground = #ff5a5a
+label-close-foreground = ${colors.primary}
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}
 
-menu-0-0 = ""
-menu-0-0-exec = reboot
-menu-0-0-foreground = #ff7b5a
-menu-0-1 = ""
-menu-0-1-exec = poweroff
-menu-0-1-foreground = #ffb65a
+menu-0-0 = ""
+menu-0-0-exec = poweroff
+menu-0-0-foreground = #ff5a5a
+menu-0-1 = ""
+menu-0-1-exec = reboot
+menu-0-1-foreground = #ff7b5a
 menu-0-2 = ""
 menu-0-2-exec = systemctl suspend
-menu-0-2-foreground = #ced07d
+menu-0-2-foreground = #ffb65a
 menu-0-3 = ""
 menu-0-3-exec = rofi -show run
-menu-0-3-foreground = #7dd0b6
+menu-0-3-foreground = #ced07d
 menu-0-4 = ""
 menu-0-4-exec = xfce4-terminal
-menu-0-4-foreground = #75507b
+menu-0-4-foreground = #7dd0b6
 
 [module/pkg]
 type = custom/script

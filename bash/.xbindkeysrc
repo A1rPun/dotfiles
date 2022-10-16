@@ -58,7 +58,7 @@
 
 # Window switch
 "rofi -show"
-  Shift+Mod4 + space
+  Mod4 + Tab
 
 
 # Capture screen
@@ -84,3 +84,10 @@
 # Stop all video capturing
 "killall ffmpeg"
   Shift+Mod4 + bracketleft
+
+# Makeshift "l" press
+"xdotool sleep 0.1; xdotool key --clearmodifiers l"
+  Mod2 + KP_Insert
+# Makeshift "L" press
+"xdotool sleep 0.1; xdotool key --clearmodifiers Shift+l"
+  Shift+Mod2 + KP_Insert

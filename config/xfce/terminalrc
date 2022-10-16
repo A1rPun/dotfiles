@@ -1,7 +1,8 @@
 # My xfce4-terminal config
-# ~/.config/xfce/terminal/terminalrc
+# ~/.config/xfce4/terminal/terminalrc
 
 [Configuration]
+FontName=Fira Code
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
 MiscBellUrgent=FALSE
@@ -32,8 +33,8 @@ FontName=Roboto Mono 12
 BackgroundDarkness=0.850000
 BackgroundMode=TERMINAL_BACKGROUND_TRANSPARENT
 ColorCursorUseDefault=FALSE
-# Theme = Operator Mono Dark (custom)
-ColorForeground=#bbbbbb
-ColorBackground=#000000
-ColorCursor=#fcdc08
-ColorPalette=#5a5a5a;#ca372d;#4d7b3a;#d4d697;#4387cf;#b86cb4;#72d5c6;#ced4cd;#9a9b99;#c37d62;#83d0a2;#fdfdc5;#89d3f6;#ff2c7a;#82eada;#fdfdf6
+# Theme = Atelier Forest Dark (custom)
+ColorForeground=#a8a8a1a19f9f
+ColorBackground=#1b1b19191818
+ColorCursor=#a8a8a1a19f9f
+ColorPalette=#1b1b19191818;#f2f22c2c4040;#5a5ab7b73838;#d5d591911a1a;#40407e7ee7e7;#66666666eaea;#0000adad9c9c;#a8a8a1a19f9f;#76766e6e6b6b;#f2f22c2c4040;#5a5ab7b73838;#d5d591911a1a;#40407e7ee7e7;#66666666eaea;#0000adad9c9c;#f1f1efefeeee

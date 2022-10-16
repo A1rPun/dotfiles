@@ -15,6 +15,7 @@ fi
 alias cal="cal -m -w --color"
 alias dig="drill"
 alias dua="du -hsc *"
+alias dui="du -h * --max-depth=1 --exclude=.git --exclude=node_modules"
 alias diskusage="dfc"
 alias la="ls -aF"
 alias ll="ls -laF"
