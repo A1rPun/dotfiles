@@ -29,6 +29,7 @@ alias doom-emacs="emacs -nw"
 alias vi="vim"
 alias ed="doom-emacs"
 alias whereami="pwd -P"
+alias cleardns='dscacheutil -flushcache; killall -HUP mDNSResponder; say DNS Cleared.'
 # Queries
 alias qf="find . | grep"
 alias qp="ps faux | grep"
@@ -38,14 +39,16 @@ alias qs="du -sh"
 ## Languages
 alias paccept="php bin/console --env=accept"
 alias pdev="php bin/console --env=dev"
-alias phpfix="php-cs-fixer fix && phpstan analyse"
 alias pi="ipython"
 alias pprod="php bin/console --env=prod"
 alias r="Rscript"
 alias ri="R --quiet"
+alias phpfix="php vendor/bin/rector process && vendor/bin/php-cs-fixer fix && vendor/bin/phpstan --memory-limit=-1 --xdebug"
 ## Apps
 ### Asciinema
 alias ac="asciinema rec -w 2.5 -c '$PREFIX/bin/bash -l' demo.json"
+# Docker
+alias dps='docker ps --format "table {{.ID}}\t{{.Status}}\t{{.Names}}"'
 # Entr
 alias watch_with="ls * | entr"
 alias ww="watch_with"
@@ -54,10 +57,10 @@ alias json="fx package.json"
 ### Git
 alias ff="git diff"
 alias gai="git add -p"
-alias gb="git checkout -b"
 alias gc="git commit -m"
 alias gca="git commit --amend --no-edit"
 alias gci="git checkout -p"
+alias gcb="git checkout -b"
 alias gco="git checkout"
 alias gg="git pull"
 alias gl="git log --pretty=format:\"%h %s\" --graph"
@@ -67,8 +70,13 @@ alias gri="git reset -p"
 alias grs="git remote set-url origin"
 alias gs="git status"
 alias master="git checkout master"
+alias stashall="git stash --include-untracked"
+alias popstash="git stash pop"
 alias up="git for-each-ref --format='%(refname:short) -> %(upstream:short)' refs/heads"
 alias yolo="git add ."
+alias liststashes="git stash list"
+alias listlocalbranches="git branch"
+alias listremotebranches="git branch -r"
 ### GitDaily
 alias gd="gitdaily --all"
 alias gda="gd --parent"

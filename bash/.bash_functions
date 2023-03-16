@@ -111,3 +111,8 @@ find_git_branch() {
     echo ""
   fi
 }
+
+weather() {
+  place=${1:-"Netherlands"}
+  curl "https://wttr.in/$place"
+}
