@@ -1,7 +1,7 @@
 alias tmuxi="pkg install"
 alias tmuxr="pkg uninstall"
 alias tmuxs="pkg search"
-alias tmuxupgrade="pkg upgrade"
+alias tmuxupgrade="apt upgrade"
 alias tmuxinstalled="pkg list-installed"
 
 noop() {
