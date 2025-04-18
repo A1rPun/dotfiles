@@ -1,0 +1,35 @@
+/* My wofi config
+ *  ~/.config/wofi/style.css
+*/
+
+window {
+  padding: 12px;
+  background-color: rgba(45, 45, 45, 0.9);
+  border: 1px solid #228b22;
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.8);
+  opacity: 0.9;
+}
+
+#input {
+  margin-bottom: 12px;
+  background-color: rgba(40, 40, 40, 1); /* doesn't work */
+}
+
+#outer-box {
+  margin: 12px;
+}
+
+#inner-box {
+  background-color: rgba(40, 40, 40, 1);
+}
+
+#scroll {}
+
+#text {
+  margin: 8px;
+}
+
+#entry:selected {
+  background-color: #228b22; /* doesn't work */
+}

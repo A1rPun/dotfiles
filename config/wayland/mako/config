@@ -1,0 +1,29 @@
+# My mako config
+# ~/.config/mako/config
+
+layer=overlay
+default-timeout=7000
+group-by=app-name,category,urgency
+
+## look
+margin=11,11
+width=250
+height=600
+max-icon-size=24
+
+font=profont for powerline 9
+text-color=#ffffff
+background-color=#000000cc
+border-size=2
+border-color=#228b22
+progress-color=source #228b22
+
+format= <b>%s</b>\n%b
+## groups
+# don't show group indicator
+[grouped]
+format= <b>%s</b>\n%b
+
+[urgency=high]
+border-color=#ff0000
+default-timeout=0

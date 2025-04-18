@@ -1,0 +1,86 @@
+// My waybar config
+// ~/.config/waybar/config.jsonc
+
+{
+	"layer": "top",
+	"height": 32,
+	"margin": "0 0 4 0",
+	"modules-left": [
+		"hyprland/workspaces",
+		"hyprland/submap"
+	],
+	"modules-center": ["hyprland/window"],
+	"modules-right": [
+		"custom/cpulbl", "cpu",
+		"custom/memlbl", "memory",
+		"network",
+		"pulseaudio",
+		"battery",
+		"custom/lbltime", "clock#time"
+	],
+	"hyprland/workspaces": {
+		"all-outputs": false,
+		"persistent_workspaces": {"*": 4},
+		"format" : "<b>[</b><span fgcolor='#ffffff'>{icon}</span><b>]</b>",
+		"format-icons": {
+			"1": "",
+			"2": "",
+			"3": "",
+			"4": ""
+		}
+	},
+	"hyprland/submap" : {"format": " <span fgcolor='#ffffff'>{}</span>" },
+	"hyprland/window": {
+		"separate-outputs": true,
+		"max-length": 100
+	},
+	"custom/lbltime" : {"format": ""},
+	"clock#time": {
+		"format": "{:%d-%m-'%y %H:%M:%S}",
+		"interval":1
+	},
+	"custom/cpulbl" : {"format": ""},
+	"cpu": {
+		"interval": 4,
+		"format": "{usage}%",
+		"max-length": 10
+	},
+	"custom/memlbl" : {
+		"format": ""
+	},
+	"memory": {
+    "interval": 30,
+    "format": "{used:0.1f}/{total:0.1f} GB"
+	},
+	"network": {
+		"interval": 30,
+		"format-wifi": "<span foreground='#228b22'></span>{signalStrength}%",
+		"format-ethernet": "<span foreground='#228b22'></span>{ifname}",
+		"format-disconnected": "<span foreground='#228b22'></span>", //An empty format will hide the module.
+		"tooltip-format": "{ifname}: up: {bandwidthUpBytes}, down: {bandwidthDownBytes}",
+		// "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+		// "tooltip-format-ethernet": " {ifname}: {ipaddr}",
+		"tooltip-format-disconnected": "Disconnected",
+		"max-length": 50
+	},
+	"pulseaudio": {
+		"format": "<span foreground='#228b22'>{icon}</span> {volume}%",
+		"format-bluetooth": "<span foreground='#228b22'>{icon} </span> {volume}%",
+		"format-muted": "",
+		"format-icons": {
+			"headphone": "",
+			"hands-free": "",
+			"headset": "",
+			"phone": "",
+			"portable": "",
+			"car": "",
+			"default": ["", "", ""]
+		},
+		"scroll-step": 1,
+		"on-click": "pavucontrol"
+	},
+	"battery": {
+		"format-icons": ["", "", "", "", ""],
+		"format": "<span foreground='#228b22'>{icon}</span> {capacity}%"
+	}
+}

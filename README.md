@@ -6,39 +6,31 @@ My personal collection of dotfiles. Free to copy or distribute.
 
 **Bash**
 
-- .xbindkeysrc (Keyboard shortcuts for apps/scripts)
-
 **Config**
 
-- bspwm (Window manager)
+- Wayland with Hyprland (Window manager)
+- waybar (Taskbar)
+- wofi (App starter)
+- clipman (Clipboard manager)
 - cava (Audio visualizer)
-- dunst (Notification service)
-- g810-led (Logitech keyboard)
-- lxdm (Greeter)
-- polybar (Taskbar)
-- rofi (App starter)
-- sxhkd (Keyboard shortcuts for bspwm)
 - vscode (Visual studio code settings)
-- xfce (Terminal)
 
 **Script**
 
 - colors.sh - Colors in terminal
 - randstring.sh - Creates a random string
+- toggle-zoom.sh - To zoom the screen
 
 ## Notable installed apps
 
-- asciinema
 - bat (Improved cat(1))
 - dfc (Improved df(1), pretty disk space usage)
 - feh (Image viewer, Background setter)
-- gitmoji-cli
-- neofetch
+- neofetch (System info)
 - nmap
 - pastel (color chooser in terminal)
 - ponymix
 - xscreensaver (for awesome visuals)
-- parcellite (clipboard manager)
 
 ## Useful tricks
 - In `htop` use F2 to customize

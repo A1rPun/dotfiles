@@ -1,0 +1,154 @@
+/* My waybar config
+ *  ~/.config/waybar/style.css
+*/
+
+/*fixed styling for disable buttons see: https://github.com/Alexays/Waybar/issues/1741 */
+button {
+  all: unset;
+}
+label {
+  all: unset;
+}
+
+* {
+  border: none;
+  border-radius: 0;
+  border-image-width: 0;
+  outline-width: 0;
+  /* `otf-font-awesome` is required to be installed for icons */
+  font-family: RobotoMono, FontAwesome6Free;
+  font-size: 12px;
+  min-height: 0;
+}
+
+window#waybar {
+  background-color: rgba(4.7,4.7,4.7,0.7);
+  border: 1px solid #228b22;
+  border-radius: 4px;
+  color: #ffffff;
+  transition-property: background-color;
+  transition-duration: .5s;
+}
+
+tooltip {
+  background-color: rgba(4.7,4.7,4.7,0.7);
+  border: 1px solid #228b22;
+  opacity: 0.9;
+}
+window#waybar.hidden {
+  opacity: 0.2;
+}
+#workspaces button {
+  padding-right: 4px;
+  color: #175d17;
+  min-width: 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+#workspaces button:hover {
+  background: rgba(0, 0, 0, 0.2);
+  color: #228b22;
+}
+#workspaces button.active,
+#workspaces button.focused {
+  color: #228b22;
+}
+#workspaces button.persistent {
+}
+#workspaces button.visible {
+}
+#workspaces button.urgent {
+  color: #228b22;
+}
+
+#clock.week,
+#clock.date,
+#clock.time,
+#battery,
+#cpu,
+#disk,
+#disk.dump,
+#memory,
+#network,
+#temperature,
+#backlight,
+#pulseaudio,
+#custom-media,
+#idle_inhibitor,
+#mpd {
+  padding: 0 0px;
+  margin-right: 8px;
+}
+
+/* #mode {margin-left: 15px} */
+
+@keyframes blink {
+  to {
+    background-color: #ffffff;
+    color: #000000;
+  }
+}
+
+#battery.critical:not(.charging) {
+  background-color: #f53c3c;
+  color: #ffffff;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#tray { margin-right: 5px;}
+
+#custom-cpulbl,
+#custom-lblweek,
+#custom-lbltime,
+#network.icon,
+#language
+{
+  color: #228b22;
+}
+
+#custom-memlbl,
+#mode,
+#custom-lbldate,
+#custom-disklbl,
+#custom-lblvolume,
+#submap
+{
+  color: #228b22;
+}
+
+#mode,
+#custom-lblweek,
+#custom-lbltime,
+#custom-lbldate,
+#custom-memlbl,
+#custom-cpulbl,
+#custom-disklbl,
+#custom-lblvolume,
+#network.icon,
+#submap,
+#language,
+#workspaces
+{
+  min-width:0;
+  margin-left: 8px;
+  font-size: 12px;
+  /* padding: 0 0px;
+     margin: 0 0; */
+}
+
+#taskbar button {
+  /* display: none; */
+  background: transparent;
+  outline-color: transparent;
+  border-color: transparent;
+  color: transparent;
+  box-shadow: none;
+}
+
+#taskbar button.active {
+  color: #ffffff;
+}
