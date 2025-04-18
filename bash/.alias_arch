@@ -9,11 +9,10 @@ alias yar="yay -R"
 alias archupdate="yay -Syy && yay -Sy archlinux-keyring"
 alias archupgrade="yay -Su"
 alias archinstalled="yay -Qt"
-alias yorphanlist="yay -Qdt | awk '{print \$1}' | xargs yay -Qi | awk -F ':' '/Name/{printf \$2} /Installed Size/{print \$2;}'"
-alias yorphanclean="xargs -ra <(yay -Qdt | awk '{print \$1}') yay -Rcs"
+alias archorphanclean="xargs -ra <(yay -Qdt | awk '{print \$1}') yay -Rcs"
 alias updategrub="grub-mkconfig -o /boot/grub/grub.cfg"
 alias testmic="arecord -vvv -f dat /dev/null"
-alias testscreen="xrandr -q
+alias testscreen="xrandr -q"
 
 ### Speedometer
 alias wt="speedometer -l -r wlp3s0 -t wlp3s0 -m $(( 1024 * 1024 * 3 / 2 )) -b"
