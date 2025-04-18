@@ -43,6 +43,8 @@ echoo "Symlink configuration files for packages"
 # gtkrc
 echoo "Link .gtkrc-2.0"
 linkFile "./bash/.gtkrc-2.0"
+echoo "Link gtk-3.0 settings"
+linkFile "./config/gtk-3.0/settings.ini" ".config/gtk-3.0/settings.ini"
 
 # cava
 echoo "Link cava"
@@ -53,8 +55,6 @@ linkFile "./config/cava/config" ".config/cava/config"
 echoo "Link emacs config"
 makeDirIfNotExists ~/.emacs.d/
 linkFile "./emacs/init.el" ".emacs.d/init.el"
-# TODO: g810-led
-# TODO: gtk-3.0
 
 # wayland
 echoo "Link hyprland config"
