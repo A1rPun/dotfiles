@@ -13,4 +13,12 @@ alias yorphanlist="yay -Qdt | awk '{print \$1}' | xargs yay -Qi | awk -F ':' '/N
 alias yorphanclean="xargs -ra <(yay -Qdt | awk '{print \$1}') yay -Rcs"
 alias updategrub="grub-mkconfig -o /boot/grub/grub.cfg"
 alias testmic="arecord -vvv -f dat /dev/null"
-alias testscreen="xrandr -q"
+alias testscreen="xrandr -q
+
+### Speedometer
+alias wt="speedometer -l -r wlp3s0 -t wlp3s0 -m $(( 1024 * 1024 * 3 / 2 )) -b"
+alias nt="speedometer -l -r enp2s0 -t enp2s0 -m $(( 1024 * 1024 * 3 / 2 )) -b"
+
+### Htop
+alias ht="htop --sort-key=PERCENT_MEM"
+
