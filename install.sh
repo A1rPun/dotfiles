@@ -10,6 +10,9 @@ linkFile "./bash/.bash_functions"
 # bashrc
 echoo "Link .bashrc"
 linkFile "./bash/.bashrc"
+# bash_profile
+echoo "Link .bash_profile"
+linkFile "./bash/.bash_profile"
 # inputrc
 echoo "Link .inputrc"
 linkFile "./bash/.inputrc"
