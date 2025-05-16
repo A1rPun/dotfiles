@@ -1,0 +1,47 @@
+# My alacritty config
+# ~/.config/alacritty/alacritty.toml
+
+[window]
+title = "Terminal"
+dynamic_title = true
+opacity = 0.9
+blur = true
+decorations_theme_variant = "Dark"
+padding.x = 10
+padding.y = 10
+
+[font]
+normal.family = "Fira Code"
+bold.family = "Fira Code"
+italic.family = "Fira Code"
+bold_italic.family = "Fira Code"
+size = 20.0
+
+[colors.primary]
+foreground = "0xa7a7a7"
+background = "0x1e1e1e"
+
+[colors.normal]
+black =   "0x1e1e1e"
+red =     "0xcf6a4c"
+green =   "0x8f9d6a"
+yellow =  "0xf9ee98"
+blue =    "0x7587a6"
+magenta = "0x9b859d"
+cyan =    "0xafc4db"
+white =   "0xa7a7a7"
+
+[colors.bright]
+black =   "0x5f5a60"
+red =     "0xcf6a4c"
+green =   "0x8f9d6a"
+yellow =  "0xf9ee98"
+blue =    "0x7587a6"
+magenta = "0x9b859d"
+cyan =    "0xafc4db"
+white =   "0xffffff"
+
+[mouse]
+bindings = [
+  { mouse = "Right", action = "Copy" },
+]
