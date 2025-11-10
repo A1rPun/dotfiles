@@ -1,0 +1,39 @@
+[Must have]
+git
+vim
+alacritty
+firefox
+mako
+wofi
+waybar
+htop
+neofetch
+thunar
+fira font
+fontawesome font
+ncdu
+pavucontrol
+bluez bluez-utils
+gucharmap
+feh
+
+[Should have]
+vscode
+nodejs
+npm
+
+[Could have]
+bat
+nmap
+
+[Would have]
+ponymix
+wlr-randr
+docker
+clipman
+gimp
+libreoffice
+swaylock
+brightnessctl
+xev
+

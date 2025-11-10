@@ -4,12 +4,16 @@
 {
 	"layer": "top",
 	"height": 32,
-	"margin": "0 0 4 0",
+	"margin": "0 0 0 0",
 	"modules-left": [
 		"hyprland/workspaces",
 		"hyprland/submap"
+    //"ext/workspaces"
 	],
-	"modules-center": ["hyprland/window"],
+	"modules-center": [
+    "hyprland/window"
+    //"dwl/window"
+  ],
 	"modules-right": [
 		"custom/cpulbl", "cpu",
 		"custom/memlbl", "memory",
@@ -29,6 +33,7 @@
 			"4": ""
 		}
 	},
+  //"ext/workspaces" //copy from mangowc creator
 	"hyprland/submap" : {"format": " <span fgcolor='#ffffff'>{}</span>" },
 	"hyprland/window": {
 		"separate-outputs": true,
@@ -37,7 +42,7 @@
 	"custom/lbltime" : {"format": ""},
 	"clock#time": {
 		"format": "{:%d-%m-'%y %H:%M:%S}",
-		"interval":1
+		"interval": 1
 	},
 	"custom/cpulbl" : {"format": ""},
 	"cpu": {
