@@ -3,8 +3,10 @@
 
 :set nocompatible
 
-:colo murphy
 :highlight ColorColumn term=reverse cterm=NONE ctermfg=NONE ctermbg=4 gui=NONE guifg=NONE guibg=Black
+
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
 
 :set noerrorbells
 :set termguicolors
@@ -12,7 +14,6 @@
 :set nowrap
 :set colorcolumn=80,100
 :set wildmenu
-
 :set relativenumber
 :set nu
 
@@ -20,7 +21,8 @@
 :set shiftwidth=2
 :set expandtab
 :set smartindent
-
+:set list
+:set listchars=space:·
 :set nohlsearch
 :set incsearch
 
@@ -31,3 +33,11 @@
 :set undofile
 
 :autocmd FileType javascript setlocal shiftwidth=2 tabstop=4 softtabstop=4
+:autocmd InsertEnter * set cursorline
+:autocmd InsertLeave * set nocursorline
+
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
+
+colorscheme codedark
+
