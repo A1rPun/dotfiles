@@ -1,5 +1,4 @@
-#!/usr/bin/bash
-
+#!/bin/bash
 startd=$(pgrep waybar)
 
 if [ -n "$startd" ]; then
@@ -7,4 +6,3 @@ if [ -n "$startd" ]; then
 else
 	waybar
 fi
-
