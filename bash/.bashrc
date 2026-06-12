@@ -13,6 +13,9 @@ fi
 if [ -f "$HOME/.alias_termux" ]; then
   . "$HOME/.alias_termux"
 fi
+if [ -f "$HOME/.alias_custom" ]; then
+  . "$HOME/.alias_custom"
+fi
 
 # Terminal styles
 ## Colors

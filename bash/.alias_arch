@@ -15,9 +15,8 @@ alias testmic="arecord -vvv -f dat /dev/null"
 alias testscreen="xrandr -q"
 
 ### Speedometer
-alias wt="speedometer -l -r wlp3s0 -t wlp3s0 -m $(( 1024 * 1024 * 3 / 2 )) -b"
-alias nt="speedometer -l -r enp2s0 -t enp2s0 -m $(( 1024 * 1024 * 3 / 2 )) -b"
+alias wnet="speedometer -l -r wlp3s0 -t wlp3s0 -m $(( 1024 * 1024 * 3 / 2 )) -b"
+alias net="speedometer -l -r enp2s0 -t enp2s0 -m $(( 1024 * 1024 * 3 / 2 )) -b"
 
 ### Htop
 alias ht="htop --sort-key=PERCENT_MEM"
-

@@ -61,9 +61,7 @@ window#waybar.hidden {
   color: #228b22;
 }
 
-#clock.week,
-#clock.date,
-#clock.time,
+#clock,
 #battery,
 #cpu,
 #disk,
@@ -76,11 +74,9 @@ window#waybar.hidden {
 #custom-media,
 #idle_inhibitor,
 #mpd {
-  padding: 0 0px;
+  padding: 0 0;
   margin-right: 8px;
 }
-
-/* #mode {margin-left: 15px} */
 
 @keyframes blink {
   to {
@@ -99,7 +95,10 @@ window#waybar.hidden {
   animation-direction: alternate;
 }
 
-#tray { margin-right: 5px;}
+#tray {
+  margin-right: 8px;
+  padding: 0 8px;
+}
 
 #custom-cpulbl,
 #custom-lblweek,
@@ -133,15 +132,12 @@ window#waybar.hidden {
 #language,
 #workspaces
 {
-  min-width:0;
+  min-width: 0;
   margin-left: 8px;
   font-size: 12px;
-  /* padding: 0 0px;
-     margin: 0 0; */
 }
 
 #taskbar button {
-  /* display: none; */
   background: transparent;
   outline-color: transparent;
   border-color: transparent;

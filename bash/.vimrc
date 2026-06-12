@@ -2,6 +2,7 @@
 :filetype plugin on
 
 :set nocompatible
+:set shortmess+=I
 
 :highlight ColorColumn term=reverse cterm=NONE ctermfg=NONE ctermbg=4 gui=NONE guifg=NONE guibg=Black
 
@@ -40,4 +41,3 @@ let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
 
 colorscheme codedark
-

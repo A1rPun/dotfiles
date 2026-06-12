@@ -10,4 +10,3 @@ fi
 
 ## if it glitches a lot after toggling, just enable this
 hyprctl dispatch forcerendererreload
-
