@@ -1,36 +1,23 @@
-...
---
-My personal collection of dotfiles. Free to copy or distribute.
+# ...
+
+> My personal collection of dotfiles. Free to copy or distribute.
 
 ## Folder contents
 
-**Bash**
+```
+.
+├── bash (Linux configs)
+├── config (App configs)
+├── editor (Editor configs)
+├── macos (MacOS specific configs)
+├── script (/usr/bin scripts)
+├── termux (Mobile linux configs)
+└── windows (Terminal & Powershell configs)
+```
 
-**Config**
+## Installed apps
 
-- Wayland with Hyprland (Window manager)
-- waybar (Taskbar)
-- wofi (App starter)
-- clipman (Clipboard manager)
-- cava (Audio visualizer)
-- vscode (Visual studio code settings)
-
-**Script**
-
-- colors.sh - Colors in terminal
-- randstring.sh - Creates a random string
-- toggle-zoom.sh - To zoom the screen
-
-## Notable installed apps
-
-- bat (Improved cat(1))
-- dfc (Improved df(1), pretty disk space usage)
-- feh (Image viewer, Background setter)
-- neofetch (System info)
-- nmap
-- pastel (color chooser in terminal)
-- ponymix
-- xscreensaver (for awesome visuals)
+See [packages.md](./packages.md)
 
 ## Useful tricks
 - In `htop` use F2 to customize
