@@ -1,6 +1,11 @@
 #!/bin/bash
 set +e
 
+# Screen sharing
+systemctl --user unmask xdg-desktop-portal-wlr >/dev/null 2>&1 &
+dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=wlroots
+/usr/lib/xdg-desktop-portal-wlr  >/dev/null 2>&1 &
+
 # wallpaper
 swaybg -i ~/Media/wallpaper.jpg >/dev/null 2>&1 &
 

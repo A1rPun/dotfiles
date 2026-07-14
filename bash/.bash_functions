@@ -116,3 +116,16 @@ weather() {
   place=${1:-"Netherlands"}
   curl "https://wttr.in/$place"
 }
+
+diff_paste() {
+  TMPFILE1=$(mktemp)
+  TMPFILE2=$(mktemp)
+
+  vim -c 'startinsert' $TMPFILE1
+  vim -c 'startinsert' $TMPFILE2
+
+  diff $TMPFILE1 $TMPFILE2
+
+  rm $TMPFILE1
+  rm $TMPFILE2
+}
