@@ -1,6 +1,7 @@
 /* My waybar config
  *  ~/.config/waybar/style.css
 */
+@define-color color-bg #228b22;
 
 /*fixed styling for disable buttons see: https://github.com/Alexays/Waybar/issues/1741 */
 button {
@@ -23,8 +24,8 @@ label {
 
 window#waybar {
   background-color: rgba(4.7,4.7,4.7,0.7);
-  border: 1px solid #228b22;
-  border-radius: 4px;
+  border: 1px solid @color-bg;
+  border-radius: 0;
   color: #ffffff;
   transition-property: background-color;
   transition-duration: .5s;
@@ -32,7 +33,7 @@ window#waybar {
 
 tooltip {
   background-color: rgba(4.7,4.7,4.7,0.7);
-  border: 1px solid #228b22;
+  border: 1px solid @color-bg;
   opacity: 0.9;
 }
 window#waybar.hidden {
@@ -47,18 +48,18 @@ window#waybar.hidden {
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #workspaces button:hover {
   background: rgba(0, 0, 0, 0.2);
-  color: #228b22;
+  color: @color-bg;
 }
 #workspaces button.active,
 #workspaces button.focused {
-  color: #228b22;
+  color: @color-bg;
 }
 #workspaces button.persistent {
 }
 #workspaces button.visible {
 }
 #workspaces button.urgent {
-  color: #228b22;
+  color: @color-bg;
 }
 
 #clock,
@@ -73,6 +74,7 @@ window#waybar.hidden {
 #pulseaudio,
 #custom-media,
 #idle_inhibitor,
+#window,
 #mpd {
   padding: 0 0;
   margin-right: 8px;
@@ -104,19 +106,16 @@ window#waybar.hidden {
 #custom-lblweek,
 #custom-lbltime,
 #network.icon,
-#language
-{
-  color: #228b22;
-}
-
+#language,
 #custom-memlbl,
 #mode,
+#window,
 #custom-lbldate,
 #custom-disklbl,
 #custom-lblvolume,
 #submap
 {
-  color: #228b22;
+  color: @color-bg;
 }
 
 #mode,

@@ -6,14 +6,12 @@
 	"height": 32,
 	"margin": "0 0 0 0",
 	"modules-left": [
-		// "hyprland/workspaces",
-		// "hyprland/submap"
     	"ext/workspaces"
 	],
 	"modules-center": [
-		// "hyprland/window"
-		"dwl/window"
-  ],
+		"wlr/taskbar",
+		"mango/window"
+	],
 	"modules-right": [
 		"custom/cpulbl", "cpu",
 		"custom/memlbl", "memory",
@@ -22,7 +20,21 @@
 		"battery",
 		"custom/lbltime", "clock"
 	],
-	// "hyprland/workspaces": {
+	"mango/window": {
+		"format": "{}",
+		"icon": true,
+		"icon-size": 20
+	},
+	"wlr/taskbar": {
+		"format": "{icon}",
+		"icon-size": 20,
+		"all-outputs": false,
+		"tooltip-format": "{title}",
+		"markup": true,
+		"on-click": "activate",
+		"on-click-middle": "close",
+		"ignore-list": ["wofi"]
+	},
 	"ext/workspaces": {
 		"all-outputs": false,
 		"on-click": "activate",
