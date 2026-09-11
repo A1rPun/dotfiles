@@ -21,8 +21,9 @@
 		"custom/lbltime", "clock"
 	],
 	"mango/window": {
-		"format": "{}",
+		"format": "{title}",
 		"icon": true,
+		"expand": true,
 		"icon-size": 20
 	},
 	"wlr/taskbar": {

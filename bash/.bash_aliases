@@ -1,7 +1,5 @@
 ## Application Colors!
 alias diff="diff --color=auto"
-alias egrep="egrep --color=auto"
-alias fgrep="fgrep --color=auto"
 alias grep="grep --color=auto --exclude-dir={.git,node_modules,dist}"
 if [ -x "$(command -v exa)" ]; then
   alias ls="exa"

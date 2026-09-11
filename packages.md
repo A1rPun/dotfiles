@@ -22,7 +22,7 @@ Network|nmap
 Notifications|mako
 OS Locker|swaylock
 Package manager|yay
-Print screen|grim slurp
+Print screen|grim slurp [ocr](https://github.com/TheBrightSoul/Screen-Text-Reader)
 Programming tools|nodejs / npm / docker
 Screensaver|xscreensaver
 Source control|git

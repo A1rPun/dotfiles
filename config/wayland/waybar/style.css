@@ -1,7 +1,8 @@
 /* My waybar config
  *  ~/.config/waybar/style.css
 */
-@define-color color-bg #228b22;
+@define-color primary #228b22;
+@define-color secondary #FFFFFF;
 
 /*fixed styling for disable buttons see: https://github.com/Alexays/Waybar/issues/1741 */
 button {
@@ -23,17 +24,20 @@ label {
 }
 
 window#waybar {
-  background-color: rgba(4.7,4.7,4.7,0.7);
-  border: 1px solid @color-bg;
+  background: @primary;
+  background: linear-gradient(135deg, @primary 0%, rgba(5, 5, 5, 0.7) 50%, @primary 100%);
+  border: 1px solid @primary;
   border-radius: 0;
-  color: #ffffff;
+  color: @secondary;
   transition-property: background-color;
   transition-duration: .5s;
 }
 
 tooltip {
-  background-color: rgba(4.7,4.7,4.7,0.7);
-  border: 1px solid @color-bg;
+  background: @primary;
+  background: linear-gradient(135deg, @primary 0%, rgba(5, 5, 5, 0.7) 50%, @primary 100%);
+  border: 1px solid @primary;
+  border-radius: 8px;
   opacity: 0.9;
 }
 window#waybar.hidden {
@@ -43,23 +47,26 @@ window#waybar.hidden {
   padding-right: 4px;
   color: #175d17;
   min-width: 0;
+
+  -gtk-icon-shadow: none;
+  -gtk-icon-effect: none;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #workspaces button:hover {
   background: rgba(0, 0, 0, 0.2);
-  color: @color-bg;
+  color: @primary;
 }
 #workspaces button.active,
 #workspaces button.focused {
-  color: @color-bg;
+  color: @primary;
 }
 #workspaces button.persistent {
 }
 #workspaces button.visible {
 }
 #workspaces button.urgent {
-  color: @color-bg;
+  color: @primary;
 }
 
 #clock,
@@ -82,14 +89,14 @@ window#waybar.hidden {
 
 @keyframes blink {
   to {
-    background-color: #ffffff;
+    background-color: @secondary;
     color: #000000;
   }
 }
 
 #battery.critical:not(.charging) {
   background-color: #f53c3c;
-  color: #ffffff;
+  color: @secondary;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
@@ -115,7 +122,7 @@ window#waybar.hidden {
 #custom-lblvolume,
 #submap
 {
-  color: @color-bg;
+  color: @secondary;
 }
 
 #mode,
@@ -145,5 +152,5 @@ window#waybar.hidden {
 }
 
 #taskbar button.active {
-  color: #ffffff;
+  color: @secondary;
 }
