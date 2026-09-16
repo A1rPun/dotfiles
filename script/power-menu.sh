@@ -14,16 +14,16 @@ shutdown_cmd='systemctl poweroff'
 
 
 wofi_cmd() {
-	wofi --dmenu
+	wofi --dmenu --sort-order=default
 }
 
 run_wofi() {
-	printf "$lock\n$logout\n$reboot\n$shutdown" | wofi_cmd
+	printf "$shutdown\n$reboot\n$logout\n$lock" | wofi_cmd
 }
 
 case "$(run_wofi)" in
-	$lock) ${lock_cmd};;
-	$logout) ${logout_cmd};;
-	$reboot) ${reboot_cmd};;
 	$shutdown) ${shutdown_cmd};;
+	$reboot) ${reboot_cmd};;
+	$logout) ${logout_cmd};;
+	$lock) ${lock_cmd};;
 esac
