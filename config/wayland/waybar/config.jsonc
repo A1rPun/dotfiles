@@ -6,10 +6,9 @@
 	"height": 32,
 	"margin": "0 0 0 0",
 	"modules-left": [
-    	"ext/workspaces"
+		"ext/workspaces"
 	],
 	"modules-center": [
-		"wlr/taskbar",
 		"mango/window"
 	],
 	"modules-right": [
@@ -26,21 +25,11 @@
 		"expand": true,
 		"icon-size": 20
 	},
-	"wlr/taskbar": {
-		"format": "{icon}",
-		"icon-size": 20,
-		"all-outputs": false,
-		"tooltip-format": "{title}",
-		"markup": true,
-		"on-click": "activate",
-		"on-click-middle": "close",
-		"ignore-list": ["wofi"]
-	},
 	"ext/workspaces": {
 		"all-outputs": false,
 		"on-click": "activate",
 		"persistent_workspaces": {"*": 4},
-		"format" : "<b>[</b><span fgcolor='#ffffff'>{icon}</span><b>]</b>",
+		"format" : "<span fgcolor='#777'>[</span>{icon}<span fgcolor='#777'>]</span>",
 		"format-icons": {
 			"1": "",
 			"2": "",
@@ -48,40 +37,35 @@
 			"4": ""
 		}
 	},
-	"hyprland/submap" : {"format": " <span fgcolor='#ffffff'>{}</span>" },
-	"hyprland/window": {
-		"separate-outputs": true,
-		"max-length": 100
-	},
-	"custom/lbltime" : { "format": "", "tooltip": false },
+	"custom/lbltime" : { "format": "<span fgcolor='#777'></span>", "tooltip": false },
 	"clock": {
 		"tooltip-format": "{:%d-%m-%Y}",
 		"format": "{:%d-%m-'%y %H:%M:%S}",
 		"interval": 1
 	},
-	"custom/cpulbl" : { "format": "", "tooltip": false },
+	"custom/cpulbl" : { "format": "<span fgcolor='#777'></span>", "tooltip": false },
 	"cpu": {
 		"interval": 4,
 		"format": "{usage}%",
 		"max-length": 10
 	},
-	"custom/memlbl" : { "format": "", "tooltip": false },
+	"custom/memlbl" : { "format": "<span fgcolor='#777'></span>", "tooltip": false },
 	"memory": {
-    "interval": 30,
-    "format": "{used:0.1f}/{total:0.1f} GB"
+		"interval": 30,
+		"format": "{used:0.1f}/{total:0.1f} GB"
 	},
 	"network": {
 		"interval": 30,
-		"format-wifi": "<span foreground='#228b22'></span>{signalStrength}%",
-		"format-ethernet": "<span foreground='#228b22'></span>{ifname}",
-		"format-disconnected": "<span foreground='#228b22'></span>", //An empty format will hide the module.
+		"format-wifi": "<span fgcolor='#777'></span> {signalStrength}%",
+		"format-ethernet": "<span fgcolor='#777'></span> {ifname}",
+		"format-disconnected": "<span fgcolor='#777'></span>",
 		"tooltip-format": "{ifname}: up: {bandwidthUpBytes}, down: {bandwidthDownBytes}",
 		"tooltip-format-disconnected": "Disconnected",
 		"max-length": 50
 	},
 	"pulseaudio": {
-		"format": "<span foreground='#228b22'>{icon}</span> {volume}%",
-		"format-bluetooth": "<span foreground='#228b22'>{icon} </span> {volume}%",
+		"format": "<span fgcolor='#777'>{icon}</span> {volume}%",
+		"format-bluetooth": "<span fgcolor='#777'>{icon}</span> {volume}%",
 		"format-muted": "",
 		"format-icons": {
 			"headphone": "",
@@ -97,6 +81,6 @@
 	},
 	"battery": {
 		"format-icons": ["", "", "", "", ""],
-		"format": "<span foreground='#228b22'>{icon}</span> {capacity}%"
+		"format": "<span fgcolor='#777'>{icon}</span> {capacity}%"
 	}
 }

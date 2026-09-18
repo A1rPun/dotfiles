@@ -32,6 +32,9 @@ window#waybar {
   transition-property: background-color;
   transition-duration: .5s;
 }
+window#waybar.hidden {
+  opacity: 0.2;
+}
 
 tooltip {
   background: @primary;
@@ -40,51 +43,23 @@ tooltip {
   border-radius: 8px;
   opacity: 0.9;
 }
-window#waybar.hidden {
-  opacity: 0.2;
+
+#workspaces {
+  padding-left: 8px;
 }
 #workspaces button {
-  padding-right: 4px;
-  color: #175d17;
+  padding: 0 4px;
+  color: @secondary;
   min-width: 0;
-
-  -gtk-icon-shadow: none;
-  -gtk-icon-effect: none;
 }
-
+#workspaces button.active,
+#workspaces button.focused,
+#workspaces button.urgent {
+  background: rgba(0, 0, 0, 0.1);
+}
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #workspaces button:hover {
   background: rgba(0, 0, 0, 0.2);
-  color: @primary;
-}
-#workspaces button.active,
-#workspaces button.focused {
-  color: @primary;
-}
-#workspaces button.persistent {
-}
-#workspaces button.visible {
-}
-#workspaces button.urgent {
-  color: @primary;
-}
-
-#clock,
-#battery,
-#cpu,
-#disk,
-#disk.dump,
-#memory,
-#network,
-#temperature,
-#backlight,
-#pulseaudio,
-#custom-media,
-#idle_inhibitor,
-#window,
-#mpd {
-  padding: 0 0;
-  margin-right: 8px;
 }
 
 @keyframes blink {
@@ -104,53 +79,14 @@ window#waybar.hidden {
   animation-direction: alternate;
 }
 
-#tray {
+#custom-cpulbl,
+#cpu,
+#custom-memlbl,
+#memory,
+#network,
+#pulseaudio,
+#battery,
+#custom-lbltime,
+#clock {
   margin-right: 8px;
-  padding: 0 8px;
-}
-
-#custom-cpulbl,
-#custom-lblweek,
-#custom-lbltime,
-#network.icon,
-#language,
-#custom-memlbl,
-#mode,
-#window,
-#custom-lbldate,
-#custom-disklbl,
-#custom-lblvolume,
-#submap
-{
-  color: @secondary;
-}
-
-#mode,
-#custom-lblweek,
-#custom-lbltime,
-#custom-lbldate,
-#custom-memlbl,
-#custom-cpulbl,
-#custom-disklbl,
-#custom-lblvolume,
-#network.icon,
-#submap,
-#language,
-#workspaces
-{
-  min-width: 0;
-  margin-left: 8px;
-  font-size: 12px;
-}
-
-#taskbar button {
-  background: transparent;
-  outline-color: transparent;
-  border-color: transparent;
-  color: transparent;
-  box-shadow: none;
-}
-
-#taskbar button.active {
-  color: @secondary;
 }
