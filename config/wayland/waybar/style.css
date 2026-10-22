@@ -25,7 +25,7 @@ label {
 
 window#waybar {
   background: @primary;
-  background: linear-gradient(135deg, @primary 0%, rgba(5, 5, 5, 0.7) 50%, @primary 100%);
+  background: linear-gradient(135deg, @primary 0%, #050505 50%, @primary 100%);
   border: 1px solid @primary;
   border-radius: 999px; /* Change to 0 when all apps become squared again */
   color: @secondary;
@@ -89,4 +89,15 @@ tooltip {
 #custom-lbltime,
 #clock {
   margin-right: 8px;
+  border-radius: 999px; /* Change to 0 when all apps become squared again */
+}
+
+#cpu:hover,
+#memory:hover,
+#network:hover,
+#pulseaudio:hover,
+#battery:hover,
+#clock:hover {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0 8px;
 }
