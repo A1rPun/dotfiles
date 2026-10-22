@@ -27,7 +27,7 @@ window#waybar {
   background: @primary;
   background: linear-gradient(135deg, @primary 0%, rgba(5, 5, 5, 0.7) 50%, @primary 100%);
   border: 1px solid @primary;
-  border-radius: 0;
+  border-radius: 999px; /* Change to 0 when all apps become squared again */
   color: @secondary;
   transition-property: background-color;
   transition-duration: .5s;

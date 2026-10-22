@@ -53,7 +53,7 @@ github() {
 
 # Print all colors
 colors() {
-  x=$(tput op) y=$(printf %76s)
+  local x=$(tput op) y=$(printf %76s)
   for i in {0..256}; do
     o=00$i
     echo -e ${o:${#o}-3:3} $(
@@ -65,7 +65,7 @@ colors() {
 
 # View markdown in terminal
 md() {
-  fileName=${1:-"README.md"}
+  local fileName=${1:-"README.md"}
   markdown "$fileName"
 }
 
@@ -113,13 +113,13 @@ find_git_branch() {
 }
 
 weather() {
-  place=${1:-"Netherlands"}
+  local place=${1:-"Netherlands"}
   curl "https://wttr.in/$place"
 }
 
 diff_paste() {
-  TMPFILE1=$(mktemp)
-  TMPFILE2=$(mktemp)
+  local TMPFILE1=$(mktemp)
+  local TMPFILE2=$(mktemp)
 
   vim -c 'startinsert' $TMPFILE1
   vim -c 'startinsert' $TMPFILE2
@@ -128,4 +128,12 @@ diff_paste() {
 
   rm $TMPFILE1
   rm $TMPFILE2
+}
+
+worktree_list() {
+  local worktree=$( \
+    git worktree list \
+    | cut --delimiter=' ' -f1 \
+    | fzf --scheme=path --preview="git -C {} status" \
+  ) && cd "$worktree"
 }
