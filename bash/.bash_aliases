@@ -26,6 +26,7 @@ alias doom-emacs="emacs -nw"
 alias ed="doom-emacs"
 alias whereami="pwd -P"
 alias cleardns='dscacheutil -flushcache; killall -HUP mDNSResponder; say DNS Cleared.'
+alias environment="printenv | fzf"
 # Queries
 alias qf="find . | grep"
 alias qp="ps faux | grep"

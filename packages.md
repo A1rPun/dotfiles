@@ -5,7 +5,7 @@ Usage|Program
 Window system|Wayland
 Window manager|Hyprland / Mangowm
 App starter|wofi
-Audio visualizer|cava
+Audio visualizer|-
 Audio|pavucontrol / ponymix
 Bluetooth|bluez / bluez-utils
 Browser|firefox

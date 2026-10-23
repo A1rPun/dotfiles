@@ -24,4 +24,4 @@ See [packages.md](./packages.md)
 
 ## Useful links
 
-- [Colorize stuff](https://wiki.archlinux.org/index.php/Color_output_in_console)
+- [Colorize stuff](https://wiki.archlinux.org/title/Color_output_in_console)

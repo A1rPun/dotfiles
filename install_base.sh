@@ -18,5 +18,5 @@ makeDirIfNotExists() {
 
 install() {
   echoo "Installing package: $1"
-  pacman -S "$1" -y
+  pacman -Sy "$1"
 }
