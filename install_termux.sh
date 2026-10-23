@@ -3,13 +3,13 @@
 
 # motd
 echoo "Link motd"
-linkFile "./termux/motd" "../usr/etc/motd"
+linkFile "./termux/motd" "../usr/etc/"
 # termux properties
 echoo "Link properties"
-linkFile "./termux/termux.properties" ".termux/termux.properties"
+linkFile "./termux/termux.properties" ".termux/"
 # termux colors
 echoo "Link colors"
-linkFile "./termux/termux.colors" ".termux/termux.colors"
+linkFile "./termux/termux.colors" ".termux/"
 # termux alias
 echoo "Link termux alias"
 linkFile "./bash/.alias_termux"

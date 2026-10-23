@@ -8,6 +8,10 @@ linkFile() {
   ln -sri "$1" ~/"$2"
 }
 
+linkAllFile() {
+  ln -sri "$1"* ~/"$2"
+}
+
 makeExecutable() {
   chmod u+x "$1"
 }

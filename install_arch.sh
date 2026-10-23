@@ -9,8 +9,9 @@ install "firefox"
 install "vim"
 install "vscode"
 install "thunar"
+install "git"
 
-install "hyprland"
+install "mangowm"
 install "waybar"
 install "swaybg"
 install "mako"
@@ -18,6 +19,7 @@ install "clipman"
 install "swaylock"
 install "grim"
 install "slurp"
+install "wlr-randr"
 
 install "htop"
 install "pavucontrol"
@@ -25,51 +27,39 @@ install "gucharmap"
 install "alacritty"
 install "openssh"
 install "neofetch"
-install "cava"
 
 install "ttf-fira-code"
 install "ttf-roboto-mono"
 install "ttf-font-awesome"
 
+echoo "Symlink configuration files"
+
 # alias_arch
 echoo "Link .alias_arch"
 linkFile "./bash/.alias_arch"
 
-# motd
-echoo "Link motd"
-linkFile "./termux/motd" "../usr/etc/motd"
-
-echoo "Symlink configuration files for packages"
 # gtkrc
 echoo "Link .gtkrc-2.0"
 linkFile "./bash/.gtkrc-2.0"
 echoo "Link gtk-3.0 settings"
-linkFile "./config/gtk-3.0/settings.ini" ".config/gtk-3.0/settings.ini"
-
-# cava
-echoo "Link cava"
-makeDirIfNotExists ~/.config/cava
-linkFile "./config/cava/config" ".config/cava/config"
-
-# emacs
-echoo "Link emacs config"
-makeDirIfNotExists ~/.emacs.d/
-linkFile "./emacs/init.el" ".emacs.d/init.el"
+makeDirIfNotExists ~/.config/gtk-3.0
+linkFile "./config/gtk-3.0/settings.ini" ".config/gtk-3.0/"
 
 # wayland
-echoo "Link hyprland config"
-makeDirIfNotExists ~/.config/hypr
-linkFile "./config/wayland/hyprland.conf" ".config/hypr/hyprland.conf"
+echoo "Link mango config"
+makeDirIfNotExists ~/.config/mango
+linkAllFile "./config/wayland/mango/" ".config/mango/"
 echoo "Link waybar config"
 makeDirIfNotExists ~/.config/waybar
-linkFile "./config/wayland/waybar/config.jsonc" ".config/waybar/config.jsonc"
-linkFile "./config/wayland/waybar/style.css" ".config/waybar/style.css"
+linkAllFile "./config/wayland/waybar/" ".config/waybar/"
 echoo "Link wofi config"
 makeDirIfNotExists ~/.config/wofi
-linkFile "./config/wayland/wofi/config" ".config/wofi/config"
-linkFile "./config/wayland/wofi/style.css" ".config/wofi/style.css"
+linkAllFile "./config/wayland/wofi/" ".config/wofi/"
 echoo "Link mako config"
 makeDirIfNotExists ~/.config/mako
-linkFile "./config/wayland/mako/config" ".config/mako/config"
+linkAllFile "./config/wayland/mako/" ".config/mako/"
+echoo "Link swaylock config"
+makeDirIfNotExists ~/.config/swaylock
+linkAllFile "./config/wayland/swaylock/" ".config/swaylock/"
 
 echoo "Done installing dotfiles"
