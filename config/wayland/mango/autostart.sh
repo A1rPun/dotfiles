@@ -7,7 +7,7 @@ dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 /usr/lib/xdg-desktop-portal-wlr  >/dev/null 2>&1 &
 
 # wallpaper
-swaybg -i ~/Media/wallpaper.jpg >/dev/null 2>&1 &
+swaybg -i ~/Media/wp/wallpaper.jpg >/dev/null 2>&1 &
 
 # top bar
 waybar >/dev/null 2>&1 &

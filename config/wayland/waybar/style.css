@@ -84,17 +84,15 @@ tooltip {
   animation-direction: alternate;
 }
 
-#custom-cpulbl,
 #cpu,
-#custom-memlbl,
 #memory,
 #network,
 #pulseaudio,
 #battery,
-#custom-lbltime,
 #clock {
-  margin-right: 8px;
   border-radius: 999px; /* Change to 0 when all apps become squared again */
+  margin: 4px 0 4px 0;
+  padding: 0 8px;
 }
 
 #cpu:hover,
@@ -104,5 +102,9 @@ tooltip {
 #battery:hover,
 #clock:hover {
   background: rgba(255, 255, 255, 0.2);
-  padding: 0 8px;
+}
+
+#clock {
+  /* Ideally you want padding-right on waybar */
+  margin-right: 4px;
 }
