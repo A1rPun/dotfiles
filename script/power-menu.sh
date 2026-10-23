@@ -1,7 +1,7 @@
 #! /bin/bash
 
 lock=''
-lock_cmd='swaylock --daemonize --color 000000'
+lock_cmd='swaylock'
 
 logout=''
 logout_cmd='killall mango'

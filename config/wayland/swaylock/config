@@ -1,0 +1,9 @@
+color=#228b22
+ring-color=#bada55
+inside-color=#dcedc1
+clear-color=#ffd3b6
+wrong-color=#ff8b94
+inside-ver-color=#a8e6cf
+daemonize
+show-failed-attempts
+show-keyboard-layout
