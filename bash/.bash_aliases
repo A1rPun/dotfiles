@@ -8,16 +8,16 @@ else
 fi
 ## General
 #alias -="cd -"
+alias repeat_last_command="until !!; do sleep 5 ; done"
 alias cal="cal -m -w --color"
 alias dig="drill"
-alias dua="du -hsc *"
-alias dui="du -h * --max-depth=1 --exclude=.git --exclude=node_modules"
-alias diskusage="dfc"
+alias du="ncdu --color dark"
 alias la="ls -aF"
 alias ll="ls -laF"
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias listalias="alias | fzf"
+alias ff="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
 alias mime="file -bi"
 alias mk="cat Makefile | grep '^[a-zA-Z0-9]*:$' | sort"
 alias nslookup="drill"
@@ -32,7 +32,7 @@ alias qf="find . | grep"
 alias qp="ps faux | grep"
 alias qt="grep -C 2 -R"
 alias qw="xprop | grep WM_CLASS"
-alias qs="du -sh"
+alias qs="\du -sh"
 ## Languages
 alias phpfix="php vendor/bin/rector process && vendor/bin/php-cs-fixer fix && vendor/bin/phpstan --memory-limit=-1 --xdebug"
 ## Apps
@@ -44,7 +44,7 @@ alias ww="watch_with"
 ### Fx
 alias json="fx package.json"
 ### Git
-alias ff="git diff"
+alias gff="git diff"
 alias gai="git add --patch"
 alias gca="git commit --amend --no-edit"
 alias gbd="git branch --delete --force"
