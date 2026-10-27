@@ -18,19 +18,13 @@ label {
   border-image-width: 0;
   outline-width: 0;
   /* `otf-font-awesome` is required to be installed for icons */
-  font-family: RobotoMono, FontAwesome6Free;
+  font-family: 'Fira Code', FontAwesomeFree;
   font-size: 12px;
   min-height: 0;
 }
 
 window#waybar {
-  background: @primary;
-  background: linear-gradient(135deg, @primary 0%, #050505 50%, @primary 100%);
-  border: 1px solid @primary;
-  border-radius: 999px; /* Change to 0 when all apps become squared again */
-  color: @secondary;
-  transition-property: background-color;
-  transition-duration: .5s;
+  background: transparent;
 }
 window#waybar.hidden {
   opacity: 0.2;
@@ -44,12 +38,23 @@ tooltip {
   opacity: 0.9;
 }
 
-#workspaces {
-  padding-left: 8px;
+.modules-left,
+/* .modules-center, */
+.modules-right {
+  padding: 0 4px;
+  background: @primary;
+  background: linear-gradient(135deg, @primary 0%, #050505 50%, @primary 100%);
+  border: 1px solid @primary;
+  border-radius: 999px; /* Change to 0 when all apps become squared again */
+  color: @secondary;
+  transition-property: background-color;
+  transition-duration: .5s;
 }
+
+#workspaces {}
 #workspaces button {
   padding: 0 4px;
-  margin: 4px 4px 4px 0;
+  margin: 4px;
   color: @secondary;
   min-width: 0;
   border-radius: 999px;
@@ -63,7 +68,7 @@ tooltip {
 #workspaces button.urgent {
   background:
     linear-gradient(0deg, #000) padding-box,
-    linear-gradient(135deg, #CBC3E3 0%, pink 50%, orange 100%) border-box;
+    linear-gradient(135deg, grey 0%, #050505 50%, grey 100%) border-box;
   border: 1px solid transparent;
 }
 
@@ -102,9 +107,4 @@ tooltip {
 #battery:hover,
 #clock:hover {
   background: rgba(255, 255, 255, 0.2);
-}
-
-#clock {
-  /* Ideally you want padding-right on waybar */
-  margin-right: 4px;
 }

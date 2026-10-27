@@ -30,7 +30,7 @@
     "persistent_workspaces": {
       "*": 4
     },
-    "format": "<span fgcolor='#777'>[</span>{icon}<span fgcolor='#777'>]</span>",
+    "format": "{icon}",
     "format-icons": {
       "1": "",
       "2": "",
@@ -41,7 +41,7 @@
   "clock": {
     "tooltip-format": "{:%A %B %d %Y}",
     // "format": "<span fgcolor='#777'></span> {:%d-%m-'%y, %H:%M:%S}",
-    "format": "<span fgcolor='#777'></span> {:%y年%m月%d日，%H点%M分%S秒}",
+    "format": "<span fgcolor='#777'></span> 2o{:%y年%m月%d日，%H点%M分%S秒}",
     "interval": 1
   },
   "cpu": {
@@ -51,7 +51,7 @@
   },
   "memory": {
     "interval": 30,
-    "format": "<span fgcolor='#777'></span> {used:0.1f}/{total:0.1f} GB"
+    "format": "<span fgcolor='#777'></span> {percentage}%"
   },
   "network": {
     "interval": 30,
@@ -65,7 +65,7 @@
   "pulseaudio": {
     "format": "<span fgcolor='#777'>{icon}</span> {volume}%",
     "format-bluetooth": "<span fgcolor='#777'>{icon}</span> {volume}%",
-    "format-muted": "",
+    "format-muted": "<span fgcolor='#777'></span> muted",
     "format-icons": {
       "headphone": "",
       "hands-free": "",

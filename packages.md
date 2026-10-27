@@ -14,7 +14,7 @@ Document editor|libreoffice
 Editor|vscode / vim / emacs
 Emoji|gucharmap / wofi-emoji / noto-fonts-emoji
 File browser|thunar
-Fonts|ttf-fira-code / fontawesome font
+Fonts|ttf-fira-code / otf-font-awesome
 Image editor|gimp
 Image viewer|feh
 Keycode viewer|xev / wev

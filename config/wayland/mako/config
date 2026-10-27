@@ -11,7 +11,7 @@ width=250
 height=600
 max-icon-size=24
 
-font=profont for powerline 9
+font=Fira Code
 text-color=#ffffff
 background-color=#000000cc
 border-size=2

@@ -5,7 +5,7 @@
   "editor.renderControlCharacters": true,
   "editor.renderWhitespace": "all",
   "editor.tabSize": 2,
-  "editor.fontFamily": "'Hack', 'Roboto Mono', 'monospace', monospace",
+  "editor.fontFamily": "'Hack', 'Fira Code', 'monospace', monospace",
   /* Explorer */
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
@@ -25,5 +25,10 @@
   /* Extensions */
   "extensions.autoUpdate": false,
   "workbench.iconTheme": "vscode-icons",
-  "bracket-pair-colorizer-2.colors": ["#00ff00", "#a7cf5c", "#32964e", "#c6cc2e"]
+  "bracket-pair-colorizer-2.colors": [
+    "#00ff00",
+    "#a7cf5c",
+    "#32964e",
+    "#c6cc2e"
+  ]
 }

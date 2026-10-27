@@ -9,7 +9,6 @@ install "firefox"
 install "vim"
 install "vscode"
 install "thunar"
-install "git"
 
 install "mangowm"
 install "waybar"
@@ -29,8 +28,7 @@ install "openssh"
 install "neofetch"
 
 install "ttf-fira-code"
-install "ttf-roboto-mono"
-install "ttf-font-awesome"
+install "otf-font-awesome"
 
 echoo "Symlink configuration files"
 
