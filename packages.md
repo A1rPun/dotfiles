@@ -16,7 +16,7 @@ Emoji|gucharmap / wofi-emoji / noto-fonts-emoji
 File browser|thunar
 Fonts|ttf-fira-code / otf-font-awesome
 Image editor|gimp
-Image viewer|feh
+Image viewer|imv
 Keycode viewer|xev / wev
 Network|nmap
 Notifications|mako

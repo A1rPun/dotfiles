@@ -137,3 +137,10 @@ worktree_list() {
     | fzf --scheme=path --preview="git -C {} status" \
   ) && cd "$worktree"
 }
+
+worktree_delete() {
+  git worktree list \
+    | cut --delimiter=' ' -f1 \
+    | fzf --multi --print0 --scheme=path --preview="git -C {} status" \
+    | xargs -0 git worktree remove
+}

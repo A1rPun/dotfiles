@@ -17,6 +17,8 @@ if [ -f "$HOME/.alias_custom" ]; then
   . "$HOME/.alias_custom"
 fi
 
+eval "$(fzf --bash)"
+
 # Terminal styles
 ## Colors
 DARKGREEN="\[\e[38;5;28m\]"
