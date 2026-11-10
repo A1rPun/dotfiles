@@ -5,9 +5,7 @@
   "height": 32,
   "margin": "4px 4px 0",
   "modules-left": [
-    "ext/workspaces"
-  ],
-  "modules-center": [
+    "ext/workspaces",
     "mango/window"
   ],
   "modules-right": [

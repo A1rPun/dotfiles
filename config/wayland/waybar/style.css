@@ -38,10 +38,11 @@ tooltip {
   opacity: 0.9;
 }
 
-.modules-left,
-/* .modules-center, */
+#workspaces,
+#window,
 .modules-right {
   padding: 0 4px;
+  margin-right: 4px;
   background: @primary;
   background: linear-gradient(135deg, @primary 0%, #050505 50%, @primary 100%);
   border: 1px solid @primary;
